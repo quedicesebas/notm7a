@@ -1,3 +1,5 @@
+import { MessageCircle } from "lucide-react"
+
 export function Footer() {
   return (
     <footer className="bg-foreground text-background py-12">
@@ -19,10 +21,25 @@ export function Footer() {
           </div>
           <div className="space-y-4">
             <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Contacto</h4>
-            <p className="text-sm text-gray-400">
-              Bogotá, Colombia<br />
-              contacto@defendamoslaseptima.org
-            </p>
+            <div className="text-sm text-gray-400 space-y-2">
+              <p>Bogotá, Colombia</p>
+              <p>
+                <a href="mailto:contacto@defendamoslaseptima.org" className="hover:text-white transition-colors">
+                  contacto@defendamoslaseptima.org
+                </a>
+              </p>
+              <p>
+                <a 
+                  href="https://wa.me/573006609565" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="flex items-center gap-2 hover:text-white transition-colors"
+                >
+                  <MessageCircle className="h-4 w-4 text-green-500" />
+                  +57 300 660 9565
+                </a>
+              </p>
+            </div>
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
