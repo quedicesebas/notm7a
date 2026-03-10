@@ -4,13 +4,11 @@
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Heart } from "lucide-react"
-import { DonationModal } from "@/components/ui/donation-modal"
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
-  const [isModalOpen, setIsModalOpen] = useState(false)
   const logoImg = PlaceHolderImages.find(img => img.id === 'logo')
 
   useEffect(() => {
@@ -46,26 +44,28 @@ export function Navbar() {
           <a href="#about" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>Sobre Nosotros</a>
           <a href="#objectives" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>Objetivos</a>
           <Button 
-            onClick={() => setIsModalOpen(true)}
+            asChild
             className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 font-bold"
           >
-            <Heart className="mr-2 h-4 w-4 fill-current" />
-            Donar
+            <a href="https://armatuvaca.com/participante/yc131858YfH96730" target="_blank" rel="noopener noreferrer">
+              <Heart className="mr-2 h-4 w-4 fill-current" />
+              Donar
+            </a>
           </Button>
         </div>
 
         <div className="md:hidden">
           <Button 
-            onClick={() => setIsModalOpen(true)}
+            asChild
             size="sm"
             className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-4 font-bold"
           >
-            Donar
+            <a href="https://armatuvaca.com/participante/yc131858YfH96730" target="_blank" rel="noopener noreferrer">
+              Donar
+            </a>
           </Button>
         </div>
       </div>
-      
-      <DonationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </nav>
   )
 }

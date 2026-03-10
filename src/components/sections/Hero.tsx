@@ -4,11 +4,8 @@ import { Button } from "@/components/ui/button"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import Image from "next/image"
 import { Heart } from "lucide-react"
-import { useState } from "react"
-import { DonationModal } from "@/components/ui/donation-modal"
 
 export function Hero() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
   const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg')
 
   return (
@@ -41,10 +38,12 @@ export function Hero() {
             <Button 
               size="lg" 
               className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg font-bold px-8 h-14 rounded-full shadow-lg transition-all hover:scale-105"
-              onClick={() => setIsModalOpen(true)}
+              asChild
             >
-              <Heart className="mr-2 h-5 w-5 fill-current" />
-              Donar Ahora
+              <a href="https://armatuvaca.com/participante/yc131858YfH96730" target="_blank" rel="noopener noreferrer">
+                <Heart className="mr-2 h-5 w-5 fill-current" />
+                Donar Ahora
+              </a>
             </Button>
             <Button 
               variant="outline" 
@@ -57,8 +56,6 @@ export function Hero() {
           </div>
         </div>
       </div>
-
-      <DonationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   )
 }
