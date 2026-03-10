@@ -1,0 +1,17 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Bogota Carrera Septima urban landscape",
+      "imageUrl": "https://picsum.photos/seed/septima-1/1200/800",
+      "imageHint": "Bogota city"
+    },
+    {
+      "id": "committee-group",
+      "description": "Citizens meeting for urban advocacy",
+      "imageUrl": "https://picsum.photos/seed/committee/800/600",
+      "imageHint": "community meeting"
+    }
+  ]
+}
