@@ -40,7 +40,7 @@ export function Hero() {
               className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg font-bold px-8 h-14 rounded-full shadow-lg transition-all hover:scale-105"
               asChild
             >
-              <a href="https://armatuvaca.com/participante/yc131858YfH96730" target="_blank" rel="noopener noreferrer">
+              <a href="https://armatuvaca.com/vaca/yc131858YfH96730" target="_blank" rel="noopener noreferrer">
                 <Heart className="mr-2 h-5 w-5 fill-current" />
                 Donar Ahora
               </a>

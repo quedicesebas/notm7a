@@ -43,7 +43,12 @@ export function Footer() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
-          <p>© {new Date().getFullYear()} Defendamos la Séptima - Comité Ciudadano. Todos los derechos reservados.</p>
+          <div className="space-y-1 text-center md:text-left">
+            <p>© {new Date().getFullYear()} Defendamos la Séptima - Comité Ciudadano. Todos los derechos reservados.</p>
+            <p>
+              Hecho con ❤️ por voluntarios. Es un proyecto <a href="https://github.com/quedicesebas/notm7a" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Open Source</a>.
+            </p>
+          </div>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Política de Privacidad</a>
             <a href="#" className="hover:text-white transition-colors">Términos de Uso</a>

@@ -47,7 +47,7 @@ export function Navbar() {
             asChild
             className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 font-bold"
           >
-            <a href="https://armatuvaca.com/participante/yc131858YfH96730" target="_blank" rel="noopener noreferrer">
+            <a href="https://armatuvaca.com/vaca/yc131858YfH96730" target="_blank" rel="noopener noreferrer">
               <Heart className="mr-2 h-4 w-4 fill-current" />
               Donar
             </a>
@@ -60,7 +60,7 @@ export function Navbar() {
             size="sm"
             className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-4 font-bold"
           >
-            <a href="https://armatuvaca.com/participante/yc131858YfH96730" target="_blank" rel="noopener noreferrer">
+            <a href="https://armatuvaca.com/vaca/yc131858YfH96730" target="_blank" rel="noopener noreferrer">
               Donar
             </a>
           </Button>
