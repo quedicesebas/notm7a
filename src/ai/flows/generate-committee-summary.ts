@@ -1,10 +1,10 @@
 'use server';
 /**
- * @fileOverview A Genkit flow for generating a concise 'About Us' summary for the Defendamos la Séptima - Comité Ciudadano.
+ * @fileOverview Un flujo de Genkit para generar un resumen conciso de 'Quiénes Somos' para el Comité Ciudadano Defendamos la Séptima.
  *
- * - generateCommitteeSummary - A function that handles the summary generation process.
- * - GenerateCommitteeSummaryInput - The input type for the generateCommitteeSummary function.
- * - GenerateCommitteeSummaryOutput - The return type for the generateCommitteeSummary function.
+ * - generateCommitteeSummary - Una función que maneja el proceso de generación del resumen.
+ * - GenerateCommitteeSummaryInput - El tipo de entrada para la función generateCommitteeSummary.
+ * - GenerateCommitteeSummaryOutput - El tipo de salida para la función generateCommitteeSummary.
  */
 
 import {ai} from '@/ai/genkit';
@@ -13,12 +13,12 @@ import {z} from 'genkit';
 const GenerateCommitteeSummaryInputSchema = z.object({
   committeeMaterials: z
     .array(z.string())
-    .describe('An array of text content, such as mission statements, objectives, and social media posts, to be summarized.'),
+    .describe('Un arreglo de contenidos de texto, como declaraciones de misión, objetivos y publicaciones en redes sociales, para ser resumidos.'),
 });
 export type GenerateCommitteeSummaryInput = z.infer<typeof GenerateCommitteeSummaryInputSchema>;
 
 const GenerateCommitteeSummaryOutputSchema = z.object({
-  summary: z.string().describe("A concise 'About Us' summary for the committee's website."),
+  summary: z.string().describe("Un resumen conciso de 'Quiénes Somos' para el sitio web del comité."),
 });
 export type GenerateCommitteeSummaryOutput = z.infer<typeof GenerateCommitteeSummaryOutputSchema>;
 
@@ -32,13 +32,13 @@ const generateCommitteeSummaryPrompt = ai.definePrompt({
   name: 'generateCommitteeSummaryPrompt',
   input: {schema: GenerateCommitteeSummaryInputSchema},
   output: {schema: GenerateCommitteeSummaryOutputSchema},
-  prompt: `You are an AI assistant tasked with creating a concise and engaging 'About Us' summary for the "Defendamos la Séptima - Comité Ciudadano" website.
+  prompt: `Eres un asistente de IA encargado de crear un resumen conciso y atractivo de la sección 'Quiénes Somos' para el sitio web "Defendamos la Séptima - Comité Ciudadano".
 
-Your goal is to clearly articulate the committee's mission, objectives, and key activities based on the provided materials.
+Tu objetivo es articular claramente la misión, los objetivos y las actividades clave del comité basándote en los materiales proporcionados.
 
-Combine the following information into a single, compelling summary suitable for a website's 'About Us' section. Focus on clarity, conciseness, and impact. The summary should be no more than 200 words.
+Combina la siguiente información en un único resumen convincente adecuado para la sección 'Quiénes Somos' de un sitio web. Enfócate en la claridad, la concisión y el impacto. El resumen no debe exceder las 200 palabras.
 
-Committee Materials:
+Materiales del Comité:
 {{#each committeeMaterials}}
 - {{{this}}}
 {{/each}}`,

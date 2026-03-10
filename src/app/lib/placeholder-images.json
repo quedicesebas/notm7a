@@ -1,21 +1,20 @@
-
 {
   "placeholderImages": [
     {
       "id": "hero-bg",
-      "description": "Bogota Carrera Septima urban landscape",
+      "description": "Paisaje urbano de la Carrera Séptima en Bogotá",
       "imageUrl": "https://picsum.photos/seed/septima-1/1200/800",
       "imageHint": "Bogota city"
     },
     {
       "id": "committee-group",
-      "description": "Citizens meeting for urban advocacy",
+      "description": "Reunión de ciudadanos por la defensa urbana",
       "imageUrl": "https://picsum.photos/seed/committee/800/600",
       "imageHint": "community meeting"
     },
     {
       "id": "logo",
-      "description": "Defendamos la Séptima Logo (No TransMilenio sign)",
+      "description": "Logo Defendamos la Séptima (Símbolo de protesta ciudadana)",
       "imageUrl": "https://picsum.photos/seed/logo-protest/200/200",
       "imageHint": "protest sign"
     }

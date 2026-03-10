@@ -1,4 +1,3 @@
-
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -17,7 +16,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImg?.imageUrl || ""}
-          alt={heroImg?.description || "Bogota Septima"}
+          alt={heroImg?.description || "Bogotá Séptima"}
           fill
           className="object-cover brightness-[0.4]"
           priority
@@ -50,7 +49,7 @@ export function Hero() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-white border-white/60 bg-black/20 backdrop-blur-md hover:bg-white/20 text-lg h-14 rounded-full transition-all"
+              className="text-white border-white/60 bg-black/40 backdrop-blur-md hover:bg-white/20 text-lg h-14 rounded-full transition-all"
               asChild
             >
               <a href="#about">Conocer más</a>
