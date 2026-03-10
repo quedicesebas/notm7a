@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button"
 import { Instagram, Twitter } from "lucide-react"
 
@@ -7,15 +6,15 @@ export function Social() {
     {
       name: "X (Twitter)",
       icon: Twitter,
-      url: "https://x.com/Defendamos7",
-      handle: "@Defendamos7",
+      url: "https://x.com/NoTM7a",
+      handle: "@NoTM7a",
       color: "bg-black text-white hover:bg-gray-900"
     },
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/defendamoslaseptima",
-      handle: "@defendamoslaseptima",
+      url: "https://instagram.com/NoTM7a",
+      handle: "@NoTM7a",
       color: "bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white hover:opacity-90"
     }
   ]

@@ -1,4 +1,3 @@
-
 export function Footer() {
   return (
     <footer className="bg-foreground text-background py-12">
@@ -22,7 +21,7 @@ export function Footer() {
             <h4 className="text-sm font-bold uppercase tracking-widest text-primary">Contacto</h4>
             <p className="text-sm text-gray-400">
               Bogotá, Colombia<br />
-              comite@defendamos7.org
+              contacto@defendamoslaseptima.org
             </p>
           </div>
         </div>
