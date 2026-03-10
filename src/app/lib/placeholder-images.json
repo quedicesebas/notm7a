@@ -1,10 +1,11 @@
+
 {
   "placeholderImages": [
     {
       "id": "hero-bg",
-      "description": "Paisaje urbano de la Carrera Séptima en Bogotá",
-      "imageUrl": "https://picsum.photos/seed/septima-1/1200/800",
-      "imageHint": "Bogota city"
+      "description": "Protesta ciudadana masiva en la Carrera Séptima con pancartas de 'Por la 7ma, NO'",
+      "imageUrl": "https://picsum.photos/seed/septima-protest-7/1200/800",
+      "imageHint": "protest bogota"
     },
     {
       "id": "committee-group",
@@ -15,7 +16,7 @@
     {
       "id": "logo",
       "description": "Logo Defendamos la Séptima (Símbolo de protesta ciudadana)",
-      "imageUrl": "https://picsum.photos/seed/logo-protest/200/200",
+      "imageUrl": "https://picsum.photos/seed/logo-protest-v2/200/200",
       "imageHint": "protest sign"
     }
   ]
