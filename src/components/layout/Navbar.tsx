@@ -33,7 +33,7 @@ export function Navbar() {
               alt="Logo Defendamos la Séptima"
               fill
               className="object-cover"
-              data-ai-hint="abstract logo"
+              data-ai-hint="protest sign"
             />
           </div>
           <div className={`flex flex-col ${scrolled ? "text-foreground" : "text-white"}`}>
@@ -44,7 +44,7 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-8">
           <a href="#about" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>Sobre Nosotros</a>
-          <a href="#about" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>Objetivos</a>
+          <a href="#objectives" className={`text-sm font-medium hover:text-primary transition-colors ${scrolled ? "text-foreground" : "text-white"}`}>Objetivos</a>
           <Button 
             onClick={() => setIsModalOpen(true)}
             className="bg-accent text-accent-foreground hover:bg-accent/90 rounded-full px-6 font-bold"
