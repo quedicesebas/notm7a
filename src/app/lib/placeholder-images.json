@@ -15,9 +15,9 @@
     },
     {
       "id": "logo",
-      "description": "Defendamos la Séptima Logo",
-      "imageUrl": "https://picsum.photos/seed/logo-7/200/200",
-      "imageHint": "abstract logo"
+      "description": "Defendamos la Séptima Logo (No TransMilenio sign)",
+      "imageUrl": "https://picsum.photos/seed/logo-protest/200/200",
+      "imageHint": "protest sign"
     }
   ]
 }

@@ -50,7 +50,7 @@ export function Hero() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-white border-white/50 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-lg h-14 rounded-full transition-all"
+              className="text-white border-white/60 bg-black/20 backdrop-blur-md hover:bg-white/20 text-lg h-14 rounded-full transition-all"
               asChild
             >
               <a href="#about">Conocer más</a>
