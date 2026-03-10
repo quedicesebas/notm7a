@@ -4,12 +4,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Target, Users, BookOpen } from "lucide-react"
 
 export function About() {
-  const summary = "Defendamos la Séptima es un comité ciudadano independiente comprometido con la transparencia y la sostenibilidad del corredor vial más emblemático de Bogotá. Nuestra misión es garantizar que cualquier intervención urbana sea técnica, financiera y socialmente responsable, protegiendo el patrimonio histórico y ambiental mientras aseguramos que la voz de los ciudadanos sea el eje central del desarrollo."
+  const summary = "Defendamos la Séptima es un comité ciudadano independiente comprometido con el corredor vial más emblemático de Bogotá. Nuestra misión es garantizar que cualquier intervención urbana sea técnica, financiera y socialmente responsable, protegiendo el patrimonio histórico y ambiental mientras aseguramos que la voz de los ciudadanos sea el eje central del desarrollo."
 
   const objectives = [
     {
-      title: "Transparencia",
-      description: "Exigimos claridad total en los procesos de licitación y ejecución de obras públicas.",
+      title: "Vanguardia técnica",
+      description: "TM es una solución vieja e insuficiente. Hay muchas y mejores opciones para usar el preciado bien que es la superficie.",
       icon: Shield
     },
     {

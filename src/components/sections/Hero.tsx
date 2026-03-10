@@ -34,7 +34,7 @@ export function Hero() {
             Defendamos la <span className="text-primary italic">Séptima</span>
           </h1>
           <p className="text-xl text-gray-200 max-w-2xl leading-relaxed">
-            Unidos por un corredor vial transparente, sostenible y centrado en las personas. 
+            Unidos por un corredor vial digno, sostenible y centrado en las personas. 
             Nuestra misión es vigilar, proponer y actuar por el patrimonio de todos los bogotanos.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-4">

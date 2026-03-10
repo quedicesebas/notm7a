@@ -31,8 +31,8 @@ export function Objectives() {
       bg: "bg-red-50"
     },
     {
-      title: "Prioridad al Peatón",
-      description: "Promover una Séptima 100% caminable, recuperando el espacio público para los ciudadanos y la micro-movilidad.",
+      title: "Una avenida para vivir y moverse",
+      description: "Promover una Séptima más caminable y conectada con el entorno, recuperando el espacio público para los ciudadanos y todas sus formas de moverse",
       icon: Footprints,
       color: "text-blue-600",
       bg: "bg-blue-50"
@@ -60,7 +60,7 @@ export function Objectives() {
           <h2 className="text-4xl md:text-5xl font-headline font-bold text-foreground">Nuestros Objetivos</h2>
           <div className="w-24 h-2 bg-primary mx-auto rounded-full" />
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Nuestra lucha no es solo contra un sistema de transporte, es por el derecho a una ciudad diseñada para la gente y no para los buses.
+            Nuestra lucha no es solo contra un sistema de transporte, es por el derecho a una ciudad diseñada para la gente y no para los buses. Una ciudad que respire y se mueva, no una estancada por años como con cada troncal y recientemente con la de la Avenida 68.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export function Objectives() {
         {/* Twitter Embed Section */}
         <div className="max-w-3xl mx-auto mb-24">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold mb-2">Evidencias del Impacto</h3>
+            <h3 className="text-2xl font-bold mb-2">¿Por qué no soñár con algo mejor que la Caracas?</h3>
             <p className="text-muted-foreground">Mira por qué defendemos una alternativa diferente para la Séptima.</p>
           </div>
           <div className="flex justify-center bg-gray-50 rounded-3xl p-4 md:p-8 shadow-inner border border-gray-100">
@@ -109,7 +109,7 @@ export function Objectives() {
           <div className="relative z-10 max-w-3xl">
             <h3 className="text-3xl font-bold mb-6">Por una Séptima para la Gente</h3>
             <p className="text-lg opacity-90 leading-relaxed">
-              Buscamos una alternativa que respete la vocación de avenida caminable, conectada con su entorno cultural, comercial y residencial. La Séptima no es una troncal más, es el corazón de nuestra identidad urbana.
+              Buscamos una alternativa que respete la vocación de avenida principal, con sus costados conectados, tejiendo su entorno cultural, comercial y residencial. La Séptima no es una troncal más, es el corazón de nuestra identidad urbana.
             </p>
           </div>
         </div>

@@ -16,7 +16,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li><a href="#" className="hover:text-white transition-colors">Inicio</a></li>
               <li><a href="#about" className="hover:text-white transition-colors">Quiénes Somos</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">Veeduría Ciudadana</a></li>
+              <li><a href="#objectives" className="hover:text-white transition-colors">Objetivos</a></li>
             </ul>
           </div>
           <div className="space-y-4">
