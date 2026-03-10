@@ -1,10 +1,27 @@
 
 "use client"
 
+import { useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { Ban, Footprints, Building2, Leaf, TrainFront, Users } from "lucide-react"
+import { Ban, Footprints, Building2, Leaf, TrainFront } from "lucide-react"
 
 export function Objectives() {
+  useEffect(() => {
+    // Carga el script de Twitter para renderizar el embed
+    const script = document.createElement("script")
+    script.src = "https://platform.twitter.com/widgets.js"
+    script.async = true
+    script.charset = "utf-8"
+    document.body.appendChild(script)
+    
+    return () => {
+      // Limpieza al desmontar el componente
+      if (document.body.contains(script)) {
+        document.body.removeChild(script)
+      }
+    }
+  }, [])
+
   const objectives = [
     {
       title: "No a la expansión del modelo fallido",
@@ -47,7 +64,7 @@ export function Objectives() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {objectives.map((obj, i) => (
             <Card key={i} className="group border-none shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
               <div className={`h-2 w-full ${obj.bg.replace('bg-', 'bg-opacity-100 bg-')}`} />
@@ -62,6 +79,19 @@ export function Objectives() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Twitter Embed Section */}
+        <div className="max-w-2xl mx-auto mb-24">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold mb-2">Evidencias del Impacto</h3>
+            <p className="text-muted-foreground">Mira por qué defendemos una alternativa diferente para la Séptima.</p>
+          </div>
+          <div className="flex justify-center bg-gray-50 rounded-3xl p-4 md:p-8 shadow-inner border border-gray-100">
+            <blockquote className="twitter-tweet" data-media-hidden="false" data-lang="es">
+              <a href="https://x.com/NoTM7a/status/2031125918316454302"></a>
+            </blockquote>
+          </div>
         </div>
 
         <div className="mt-20 p-8 md:p-12 rounded-3xl bg-primary text-white shadow-2xl relative overflow-hidden">
