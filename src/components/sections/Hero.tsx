@@ -1,3 +1,4 @@
+
 "use client"
 
 import { Button } from "@/components/ui/button"
@@ -49,7 +50,7 @@ export function Hero() {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-white border-white hover:bg-white/10 text-lg h-14 rounded-full"
+              className="text-white border-white/50 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-lg h-14 rounded-full transition-all"
               asChild
             >
               <a href="#about">Conocer más</a>

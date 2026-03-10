@@ -5,10 +5,13 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Heart } from "lucide-react"
 import { DonationModal } from "@/components/ui/donation-modal"
+import Image from "next/image"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const logoImg = PlaceHolderImages.find(img => img.id === 'logo')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,9 +26,15 @@ export function Navbar() {
       scrolled ? "bg-white/95 backdrop-blur-md shadow-md py-3" : "bg-transparent py-6"
     }`}>
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-white font-black text-xl shadow-lg">
-            S
+        <div className="flex items-center gap-3">
+          <div className="relative w-12 h-12 overflow-hidden rounded-lg shadow-lg">
+            <Image
+              src={logoImg?.imageUrl || ""}
+              alt="Logo Defendamos la Séptima"
+              fill
+              className="object-cover"
+              data-ai-hint="abstract logo"
+            />
           </div>
           <div className={`flex flex-col ${scrolled ? "text-foreground" : "text-white"}`}>
             <span className="font-bold leading-tight text-sm md:text-base">Defendamos la Séptima</span>

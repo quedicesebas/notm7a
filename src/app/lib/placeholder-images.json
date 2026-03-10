@@ -12,6 +12,12 @@
       "description": "Citizens meeting for urban advocacy",
       "imageUrl": "https://picsum.photos/seed/committee/800/600",
       "imageHint": "community meeting"
+    },
+    {
+      "id": "logo",
+      "description": "Defendamos la Séptima Logo",
+      "imageUrl": "https://picsum.photos/seed/logo-7/200/200",
+      "imageHint": "abstract logo"
     }
   ]
 }
