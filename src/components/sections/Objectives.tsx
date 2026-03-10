@@ -82,14 +82,22 @@ export function Objectives() {
         </div>
 
         {/* Twitter Embed Section */}
-        <div className="max-w-2xl mx-auto mb-24">
+        <div className="max-w-3xl mx-auto mb-24">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold mb-2">Evidencias del Impacto</h3>
             <p className="text-muted-foreground">Mira por qué defendemos una alternativa diferente para la Séptima.</p>
           </div>
           <div className="flex justify-center bg-gray-50 rounded-3xl p-4 md:p-8 shadow-inner border border-gray-100">
-            <blockquote className="twitter-tweet" data-media-hidden="false" data-lang="es">
-              <a href="https://x.com/NoTM7a/status/2031125918316454302"></a>
+            <blockquote className="twitter-tweet" data-media-max-width="560">
+              <p lang="es" dir="ltr">
+                Tres alcaldías diseñando y no pudieron si quiera porponer algo así para nuestra Séptima😔<br/><br/>
+                Así se diseña en Vitoria (País Vasco)<br/>
+                ✅Priorizar el Transporte Público<br/>
+                ✅Infraestructura ordenada para la bici<br/>
+                ✅BRT mejor pensado <a href="https://t.co/TWvHntNMHG">pic.twitter.com/TWvHntNMHG</a>
+              </p>
+              &mdash; Defendamos la Séptima - Comité Ciudadano (@NoTM7a) 
+              <a href="https://twitter.com/NoTM7a/status/2031125918316454302?ref_src=twsrc%5Etfw">March 9, 2026</a>
             </blockquote>
           </div>
         </div>
