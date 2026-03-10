@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Instagram, Twitter } from "lucide-react"
+import { Instagram, Twitter, MessageCircle } from "lucide-react"
 
 export function Social() {
   const socials = [
@@ -16,6 +16,13 @@ export function Social() {
       url: "https://instagram.com/NoTM7a",
       handle: "@NoTM7a",
       color: "bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white hover:opacity-90"
+    },
+    {
+      name: "WhatsApp",
+      icon: MessageCircle,
+      url: "https://chat.whatsapp.com/DjUXSaJ32LiAEW3arZyGbv",
+      handle: "Comunidad",
+      color: "bg-green-600 text-white hover:bg-green-700"
     }
   ]
 
@@ -24,7 +31,7 @@ export function Social() {
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-headline mb-4">Mantente Informado</h2>
         <p className="text-muted-foreground mb-12 max-w-xl mx-auto">
-          Sigue nuestras actualizaciones diarias y únete a la conversación en nuestras redes sociales.
+          Sigue nuestras actualizaciones diarias y únete a la conversación en nuestras redes sociales y comunidades.
         </p>
         <div className="flex flex-wrap justify-center gap-6">
           {socials.map((social, i) => (
