@@ -1,11 +1,17 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
+import FirebaseAnalytics from '@/components/FirebaseAnalytics';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://defendamoslaseptima.org'),
   title: 'Defendamos la Séptima - Comité Ciudadano',
   description: 'Comité ciudadano dedicado a la defensa y mejora del corredor de la Carrera Séptima en Bogotá.',
+  applicationName: 'NoM7a',
+  appleWebApp: {
+    capable: true,
+    title: 'NoM7a',
+    statusBarStyle: 'default',
+  },
   openGraph: {
     title: 'Defendamos la Séptima - Comité Ciudadano',
     description: 'Únete al comité ciudadano dedicado a la defensa y mejora del corredor de la Carrera Séptima en Bogotá. ¡Alza tu voz!',
@@ -28,6 +34,17 @@ export const metadata: Metadata = {
     description: 'Únete al comité ciudadano dedicado a la defensa y mejora del corredor de la Carrera Séptima en Bogotá. ¡Alza tu voz!',
     images: ['/social-preview.png'],
   },
+  manifest: '/favicon/site.webmanifest',
+  icons: {
+    icon: [
+      { url: '/favicon/favicon.ico' },
+      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/favicon/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -42,7 +59,10 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased">{children}</body>
+      <body className="font-body antialiased">
+        <FirebaseAnalytics />
+        {children}
+      </body>
     </html>
   );
 }

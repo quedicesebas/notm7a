@@ -1,5 +1,8 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Instagram, Twitter, MessageCircle } from "lucide-react"
+import { trackEvent } from "@/lib/analytics"
 
 export function Social() {
   const socials = [
@@ -40,7 +43,12 @@ export function Social() {
               asChild
               className={`h-16 px-8 rounded-full text-lg font-medium transition-transform hover:scale-105 ${social.color}`}
             >
-              <a href={social.url} target="_blank" rel="noopener noreferrer">
+              <a 
+                href={social.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("social_click", { network: social.name, url: social.url })}
+              >
                 <social.icon className="mr-3 h-6 w-6" />
                 <div className="flex flex-col items-start">
                   <span className="text-xs opacity-80 leading-none mb-0.5">{social.name}</span>

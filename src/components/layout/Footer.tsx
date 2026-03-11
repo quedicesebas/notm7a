@@ -1,4 +1,7 @@
+"use client"
+
 import { MessageCircle } from "lucide-react"
+import { trackEvent } from "@/lib/analytics"
 
 export function Footer() {
   return (
@@ -24,7 +27,11 @@ export function Footer() {
             <div className="text-sm text-gray-400 space-y-2">
               <p>Bogotá, Colombia</p>
               <p>
-                <a href="mailto:contacto@defendamoslaseptima.org" className="hover:text-white transition-colors">
+                <a 
+                  href="mailto:contacto@defendamoslaseptima.org" 
+                  className="hover:text-white transition-colors"
+                  onClick={() => trackEvent("contact_click", { method: "email", location: "footer" })}
+                >
                   contacto@defendamoslaseptima.org
                 </a>
               </p>
@@ -34,6 +41,7 @@ export function Footer() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-2 hover:text-white transition-colors"
+                  onClick={() => trackEvent("contact_click", { method: "whatsapp", location: "footer" })}
                 >
                   <MessageCircle className="h-4 w-4 text-green-500" />
                   +57 300 660 9565
@@ -46,7 +54,7 @@ export function Footer() {
           <div className="space-y-1 text-center md:text-left">
             <p>© {new Date().getFullYear()} Defendamos la Séptima - Comité Ciudadano. Todos los derechos reservados.</p>
             <p>
-              Hecho con ❤️ por voluntarios. Es un proyecto <a href="https://github.com/quedicesebas/notm7a" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Open Source</a>.
+              Hecho con ❤️ por voluntarios. Es un proyecto <a href="https://github.com/quedicesebas/notm7a" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors" onClick={() => trackEvent("outbound_click", { destination: "github", url: "https://github.com/quedicesebas/notm7a" })}>Open Source</a>.
             </p>
           </div>
           <div className="flex gap-6">
