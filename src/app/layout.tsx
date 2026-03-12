@@ -19,9 +19,9 @@ export const metadata: Metadata = {
     url: '/',
     images: [
       {
-        url: '/social-preview.png',
-        width: 1080,
-        height: 1080,
+        url: '/social-preview-wide.png',
+        width: 1200,
+        height: 630,
         alt: 'Protesta ciudadana con el mensaje: ¡Defendamos la Séptima!',
       },
     ],
@@ -30,9 +30,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@NoTM7a',
     title: 'Defendamos la Séptima - Comité Ciudadano',
     description: 'Únete al comité ciudadano dedicado a la defensa y mejora del corredor de la Carrera Séptima en Bogotá. ¡Alza tu voz!',
-    images: ['/social-preview.png'],
+    images: ['/social-preview-wide.png'],
   },
   manifest: '/favicon/site.webmanifest',
   icons: {

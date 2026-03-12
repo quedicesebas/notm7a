@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Protesta ciudadana masiva en la Carrera Séptima con pancartas de 'Por la 7ma, NO'",
+      "imageUrl": "/hero.jpg",
+      "imageHint": "Bogota city protest"
+    },
+    {
+      "id": "logo",
+      "description": "Logo Defendamos la Séptima",
+      "imageUrl": "/logo.png",
+      "imageHint": "protest sign logo"
+    }
+  ]
 }
