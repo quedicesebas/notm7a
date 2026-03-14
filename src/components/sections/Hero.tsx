@@ -14,7 +14,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src={heroImg?.imageUrl || ""}
-          alt={heroImg?.description || "Bogotá Séptima"}
+          alt={heroImg?.description || "Protesta contra la troncal de TransMilenio, Av. Séptima, Bogotá, Colombia"}
           fill
           className="object-cover brightness-[0.4]"
           priority
