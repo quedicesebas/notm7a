@@ -30,29 +30,29 @@ export function About() {
   ]
 
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-24 bg-background border-b-[8px] border-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 space-y-4">
-          <h2 className="text-4xl md:text-5xl text-foreground font-headline font-bold">Quiénes Somos</h2>
-          <div className="w-20 h-1.5 bg-primary mx-auto rounded-full" />
+          <h2 className="text-5xl md:text-7xl text-foreground font-headline uppercase tracking-wide">Quiénes Somos</h2>
+          <div className="w-32 h-2 bg-primary mx-auto" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-24">
-          <div className="space-y-6">
-            <h3 className="text-3xl text-primary font-headline font-bold">Nuestra Misión</h3>
-            <p className="text-lg leading-relaxed text-muted-foreground italic border-l-4 border-primary pl-6">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start mb-24">
+          <div className="space-y-6 bg-secondary text-secondary-foreground p-8 border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+            <h3 className="text-4xl lg:text-5xl text-accent font-headline uppercase">Nuestra Misión</h3>
+            <p className="text-lg md:text-xl leading-relaxed font-bold">
               "{summary}"
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {objectives.map((obj, i) => (
-              <Card key={i} className="border-none shadow-md hover:shadow-lg transition-shadow bg-card">
+              <Card key={i} className="border-4 border-foreground shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-none bg-card hover:bg-muted hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all">
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <obj.icon className="text-primary h-6 w-6" />
+                  <div className="w-14 h-14 bg-primary border-2 border-foreground flex items-center justify-center">
+                    <obj.icon className="text-primary-foreground h-8 w-8" />
                   </div>
-                  <h4 className="font-bold text-lg">{obj.title}</h4>
-                  <p className="text-sm text-muted-foreground">{obj.description}</p>
+                  <h4 className="font-headline text-2xl uppercase">{obj.title}</h4>
+                  <p className="text-base text-foreground font-medium leading-snug">{obj.description}</p>
                 </CardContent>
               </Card>
             ))}

@@ -5,26 +5,26 @@
 
 @layer base {
   :root {
-    --background: 0 0% 97.3%;
-    --foreground: 0 0% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
-    --primary: 0 74% 49%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 92%;
-    --secondary-foreground: 0 0% 10%;
-    --muted: 0 0% 90%;
+    --background: 46 45% 95%; /* Cream/Bone background */
+    --foreground: 0 0% 5%; /* Pure black */
+    --card: 46 45% 95%;
+    --card-foreground: 0 0% 5%;
+    --popover: 46 45% 95%;
+    --popover-foreground: 0 0% 5%;
+    --primary: 358 84% 52%; /* Deep Red (#EC1C24 from SVG) */
+    --primary-foreground: 46 45% 95%;
+    --secondary: 0 0% 5%; /* Solid Black (#050402 from SVG) */
+    --secondary-foreground: 46 45% 95%;
+    --muted: 46 30% 85%;
     --muted-foreground: 0 0% 40%;
-    --accent: 51 100% 50%;
-    --accent-foreground: 0 0% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 74% 49%;
-    --radius: 0.75rem;
+    --accent: 55 93% 59%; /* Solid Yellow (#F6E935 from SVG) */
+    --accent-foreground: 0 0% 5%; 
+    --destructive: 358 84% 52%;
+    --destructive-foreground: 46 45% 95%;
+    --border: 0 0% 5%; /* Heavy black borders */
+    --input: 0 0% 5%;
+    --ring: 358 84% 52%;
+    --radius: 0rem; /* Sharp edges for brutalist style */
   }
 }
 

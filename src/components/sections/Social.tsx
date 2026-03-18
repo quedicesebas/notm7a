@@ -11,48 +11,49 @@ export function Social() {
       icon: Twitter,
       url: "https://x.com/NoTM7a",
       handle: "@NoTM7a",
-      color: "bg-black text-white hover:bg-gray-900"
+      color: "bg-background text-foreground hover:bg-black hover:text-white"
     },
     {
       name: "Instagram",
       icon: Instagram,
       url: "https://instagram.com/NoTM7a",
       handle: "@NoTM7a",
-      color: "bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 text-white hover:opacity-90"
+      color: "bg-background text-foreground hover:bg-accent hover:text-accent-foreground"
     },
     {
       name: "WhatsApp",
       icon: MessageCircle,
       url: "https://chat.whatsapp.com/DjUXSaJ32LiAEW3arZyGbv",
       handle: "Comunidad",
-      color: "bg-green-600 text-white hover:bg-green-700"
+      color: "bg-background text-foreground hover:bg-green-500 hover:text-black"
     }
   ]
 
   return (
-    <section className="py-20 bg-secondary/30">
+    <section id="social" className="py-24 bg-accent border-b-[8px] border-foreground">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-headline mb-4">Mantente Informado</h2>
-        <p className="text-muted-foreground mb-12 max-w-xl mx-auto">
+        <h2 className="text-4xl md:text-6xl text-accent-foreground font-headline uppercase tracking-wide mb-6">Mantente Informado</h2>
+        <p className="text-accent-foreground text-lg md:text-xl font-bold mb-12 max-w-xl mx-auto">
           Sigue nuestras actualizaciones diarias y únete a la conversación en nuestras redes sociales y comunidades.
         </p>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {socials.map((social, i) => (
             <Button
               key={i}
               asChild
-              className={`h-16 px-8 rounded-full text-lg font-medium transition-transform hover:scale-105 ${social.color}`}
+              className={`h-20 px-10 rounded-none border-4 border-foreground shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] transition-all ${social.color}`}
             >
               <a 
                 href={social.url} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 onClick={() => trackEvent("social_click", { network: social.name, url: social.url })}
+                className="flex items-center"
               >
-                <social.icon className="mr-3 h-6 w-6" />
+                <social.icon className="mr-4 h-8 w-8" strokeWidth={2.5} />
                 <div className="flex flex-col items-start">
-                  <span className="text-xs opacity-80 leading-none mb-0.5">{social.name}</span>
-                  <span className="leading-none">{social.handle}</span>
+                  <span className="font-headline text-lg uppercase leading-none tracking-wide">{social.name}</span>
+                  <span className="font-bold text-sm leading-none mt-1">{social.handle}</span>
                 </div>
               </a>
             </Button>
