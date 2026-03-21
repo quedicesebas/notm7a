@@ -33,13 +33,13 @@ export function About() {
     <section id="about" className="py-24 bg-background border-b-[8px] border-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16 space-y-4">
-          <h2 className="text-5xl md:text-7xl text-foreground font-headline uppercase tracking-wide">Quiénes Somos</h2>
+          <h2 className="text-3xl md:text-5xl text-foreground font-headline uppercase tracking-wide">Quiénes Somos</h2>
           <div className="w-32 h-2 bg-primary mx-auto" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start mb-24">
           <div className="space-y-6 bg-secondary text-secondary-foreground p-8 border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)]">
-            <h3 className="text-4xl lg:text-5xl text-accent font-headline uppercase">Nuestra Misión</h3>
+            <h3 className="text-3xl lg:text-4xl text-accent font-headline uppercase">Nuestra Misión</h3>
             <p className="text-lg md:text-xl leading-relaxed font-bold">
               "{summary}"
             </p>
@@ -51,7 +51,7 @@ export function About() {
                   <div className="w-14 h-14 bg-primary border-2 border-foreground flex items-center justify-center">
                     <obj.icon className="text-primary-foreground h-8 w-8" />
                   </div>
-                  <h4 className="font-headline text-2xl uppercase">{obj.title}</h4>
+                  <h4 className="font-headline text-lg sm:text-xl uppercase">{obj.title}</h4>
                   <p className="text-base text-foreground font-medium leading-snug">{obj.description}</p>
                 </CardContent>
               </Card>

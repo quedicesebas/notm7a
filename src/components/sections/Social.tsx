@@ -18,7 +18,7 @@ export function Social() {
       icon: Instagram,
       url: "https://instagram.com/NoTM7a",
       handle: "@NoTM7a",
-      color: "bg-background text-foreground hover:bg-accent hover:text-accent-foreground"
+      color: "bg-background text-foreground hover:bg-gradient-to-tr hover:from-purple-600 hover:via-pink-500 hover:to-orange-500 hover:text-white"
     },
     {
       name: "WhatsApp",
@@ -32,7 +32,7 @@ export function Social() {
   return (
     <section id="social" className="py-24 bg-accent border-b-[8px] border-foreground">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl md:text-6xl text-accent-foreground font-headline uppercase tracking-wide mb-6">Mantente Informado</h2>
+        <h2 className="text-3xl md:text-5xl text-accent-foreground font-headline uppercase tracking-wide mb-6">Mantente Informado</h2>
         <p className="text-accent-foreground text-lg md:text-xl font-bold mb-12 max-w-xl mx-auto">
           Sigue nuestras actualizaciones diarias y únete a la conversación en nuestras redes sociales y comunidades.
         </p>
@@ -50,7 +50,7 @@ export function Social() {
                 onClick={() => trackEvent("social_click", { network: social.name, url: social.url })}
                 className="flex items-center"
               >
-                <social.icon className="mr-4 h-8 w-8" strokeWidth={2.5} />
+                <social.icon className="mr-4 h-10 w-10" strokeWidth={2.5} />
                 <div className="flex flex-col items-start">
                   <span className="font-headline text-lg uppercase leading-none tracking-wide">{social.name}</span>
                   <span className="font-bold text-sm leading-none mt-1">{social.handle}</span>

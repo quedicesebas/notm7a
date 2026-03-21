@@ -61,7 +61,7 @@ export function Objectives() {
     <section id="objectives" className="py-24 bg-background border-b-[8px] border-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-20 space-y-6">
-          <h2 className="text-5xl md:text-7xl font-headline uppercase tracking-wide text-foreground">Nuestros Objetivos</h2>
+          <h2 className="text-3xl md:text-5xl font-headline uppercase tracking-wide text-foreground">Nuestros Objetivos</h2>
           <div className="w-32 h-2 bg-primary mx-auto" />
           <p className="text-xl md:text-2xl text-foreground font-medium leading-relaxed">
             Nuestra lucha no es solo contra un sistema de transporte, es por el derecho a una ciudad diseñada para la gente y no para los buses. Una ciudad que respire y se mueva, no una estancada por años como con cada troncal y recientemente con la de la Avenida 68.
@@ -75,7 +75,7 @@ export function Objectives() {
                 <div className={`w-16 h-16 border-4 border-foreground bg-background rounded-none flex items-center justify-center transition-transform group-hover:scale-110 shrink-0`}>
                   <obj.icon className="text-foreground h-8 w-8" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-headline uppercase leading-tight">{obj.title}</h3>
+                <h3 className="text-xl md:text-2xl font-headline uppercase leading-tight">{obj.title}</h3>
                 <p className="font-medium text-base md:text-lg leading-snug">
                   {obj.description}
                 </p>
@@ -87,7 +87,7 @@ export function Objectives() {
         {/* Twitter Embed Section */}
         <div className="max-w-3xl mx-auto mb-24">
           <div className="text-center mb-8">
-            <h3 className="text-3xl md:text-4xl font-headline uppercase tracking-wide mb-2 text-foreground">¿Por qué no soñar con algo mejor que la Caracas?</h3>
+            <h3 className="text-2xl md:text-3xl font-headline uppercase tracking-wide mb-2 text-foreground">¿Por qué no soñar con algo mejor que la Caracas?</h3>
             <p className="text-lg font-medium text-foreground">Mira por qué defendemos una alternativa diferente para la Séptima.</p>
           </div>
           <div className="flex justify-center bg-background border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)] p-4 md:p-8">
@@ -110,7 +110,7 @@ export function Objectives() {
             <TrainFront className="w-96 h-96 rotate-12 text-foreground" />
           </div>
           <div className="relative z-10 max-w-3xl">
-            <h3 className="text-4xl md:text-6xl font-headline uppercase tracking-wide mb-6">Por una Séptima para la Gente</h3>
+            <h3 className="text-3xl md:text-4xl font-headline uppercase tracking-wide mb-6">Por una Séptima<br/>para la Gente</h3>
             <p className="text-xl md:text-2xl font-bold leading-relaxed">
               Buscamos una alternativa que respete la vocación de avenida principal, con sus costados conectados, tejiendo su entorno cultural, comercial y residencial. La Séptima no es una troncal más, es el corazón de nuestra identidad urbana.
             </p>

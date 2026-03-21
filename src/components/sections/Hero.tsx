@@ -27,26 +27,26 @@ export function Hero() {
             </div>
             
             {/* Typography Side */}
-            <div className="space-y-4 md:space-y-6 flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:w-[55%]">
+            <div className="space-y-3 md:space-y-4 flex flex-col justify-center items-center lg:items-start text-center lg:text-left lg:w-[55%]">
               
-              <div className="inline-block bg-secondary text-secondary-foreground border-4 border-foreground font-headline text-xl sm:text-2xl md:text-3xl px-3 py-1 uppercase tracking-wide transform -rotate-2">
+              <div className="inline-block bg-secondary text-secondary-foreground border-4 border-foreground font-headline text-lg sm:text-xl md:text-2xl px-3 py-1 uppercase tracking-wider transform -rotate-2">
                 OTRA VEZ NO
               </div>
               
-              <div className="flex flex-row md:flex-col items-center md:items-start justify-center md:justify-start w-full gap-4 md:gap-0 mt-2 md:mt-0">
-                <h1 className="text-primary text-[50px] sm:text-[70px] md:text-[100px] lg:text-[110px] !leading-[0.9] font-headline uppercase whitespace-nowrap text-left">
+              <div className="flex flex-row md:flex-col items-center md:items-start justify-center md:justify-start w-full gap-4 md:gap-0 mt-1 md:mt-1">
+                <h1 className="text-primary text-[40px] sm:text-[50px] md:text-[75px] lg:text-[85px] leading-none font-headline uppercase whitespace-nowrap text-left">
                   NO<br />
-                  <span className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-secondary tracking-tighter block">Por la CRA</span>
+                  <span className="text-xl sm:text-3xl md:text-4xl lg:text-5xl text-secondary tracking-tight block mt-1">Por la CRA</span>
                 </h1>
                 
-                <div className="flex items-start justify-center lg:justify-start gap-1 sm:gap-2 mt-0 md:mt-3">
-                  <span className="text-[80px] sm:text-[100px] md:text-[140px] lg:text-[150px] font-headline text-primary leading-[0.75] h-[65px] sm:h-[80px] md:h-[105px]">7</span>
-                  <span className="text-xl sm:text-2xl md:text-4xl font-headline text-primary leading-none mt-1 sm:mt-2">a</span>
+                <div className="flex items-start justify-center md:justify-start mt-0">
+                  <span className="text-[80px] sm:text-[110px] md:text-[140px] lg:text-[160px] font-headline text-primary leading-none sm:-ml-3 sm:-mt-1">7</span>
+                  <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-headline text-primary leading-none mt-2 sm:mt-4">a</span>
                 </div>
               </div>
 
               <div className="bg-primary border-4 border-foreground text-primary-foreground p-3 md:p-4 w-full max-w-[300px] sm:max-w-xs md:max-w-sm shadow-[4px_4px_0px_rgba(0,0,0,1)] mx-auto lg:mx-0">
-                <p className="font-headline text-lg md:text-2xl uppercase leading-tight">
+                <p className="font-headline text-base md:text-xl uppercase leading-snug">
                   “NO queremos otra troncal de TM, ni una Caracas o Av. 68”
                 </p>
               </div>
@@ -82,10 +82,10 @@ export function Hero() {
       </div>
 
       {/* Bottom Black Poster Banner */}
-      <div className="w-full bg-foreground text-background py-3 md:py-4 border-t-[6px] border-foreground shrink-0">
+      <div className="w-full bg-foreground text-background py-3 md:py-4 border-t-[6px] border-foreground shrink-0 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center w-full">
-            <h2 className="font-headline text-2xl sm:text-3xl md:text-5xl uppercase tracking-widest text-background m-0">
+            <h2 className="font-headline text-xl sm:text-2xl md:text-3xl uppercase tracking-wider text-background m-0">
               — SOÑEMOS OTRA SÉPTIMA —
             </h2>
           </div>

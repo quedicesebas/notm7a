@@ -11,7 +11,7 @@ export default {
     extend: {
       fontFamily: {
         body: ['Inter', 'sans-serif'], // Keep Inter for small text for readability
-        headline: ['Anton', 'sans-serif'], // Use Anton for heavy titles
+        headline: ['var(--font-motter)', 'sans-serif'], // Use Motter Corpus for heavy titles
         code: ['monospace'],
       },
       colors: {

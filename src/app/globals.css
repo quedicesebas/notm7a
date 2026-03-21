@@ -39,3 +39,16 @@
     @apply font-headline font-bold tracking-tight;
   }
 }
+
+/* Base selection color */
+::selection {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+/* Contrast fix for yellow backgrounds */
+.bg-accent ::selection,
+.bg-accent::selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}

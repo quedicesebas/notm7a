@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           
           <div className="text-center md:text-left">
-            <h2 className="font-headline text-4xl md:text-6xl uppercase tracking-widest text-background">
+            <h2 className="font-headline text-2xl md:text-3xl lg:text-4xl uppercase tracking-wider text-background">
               SOÑEMOS OTRA SÉPTIMA
             </h2>
             <p className="text-muted text-sm mt-2 font-body max-w-md mx-auto md:mx-0">
@@ -40,7 +40,7 @@ export function Footer() {
               >
                 <Twitter className="h-10 w-10" />
               </a>
-              <div className="font-headline text-3xl md:text-4xl tracking-widest">
+              <div className="font-headline text-2xl md:text-3xl tracking-wider">
                 @NoTM7a
               </div>
             </div>
@@ -63,8 +63,13 @@ export function Footer() {
           <div className="text-center md:text-left">
             <p>© {new Date().getFullYear()} Defendamos la Séptima - Comité Ciudadano.</p>
           </div>
-          <div>
-             Hecho con ❤️ por voluntarios. Es un proyecto <a href="https://github.com/quedicesebas/notm7a" target="_blank" rel="noopener" className="hover:text-white underline">Open Source</a>
+          <div className="text-center md:text-right flex flex-col items-center md:items-end gap-1">
+             <div>
+               Hecho con ❤️ por voluntarios. Es un proyecto <a href="https://github.com/quedicesebas/notm7a" target="_blank" rel="noopener" className="hover:text-white underline">Open Source</a>
+             </div>
+             <div>
+               Icons made from <a href="https://www.onlinewebfonts.com/icon" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">svg icons</a> is licensed by CC BY 4.0
+             </div>
           </div>
         </div>
       </div>
