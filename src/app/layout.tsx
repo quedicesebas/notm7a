@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     url: '/',
     images: [
       {
-        url: '/social-preview.png',
+        url: '/og_image.png',
         width: 1200,
         height: 630,
         alt: 'Protesta ciudadana con el mensaje: ¡Defendamos la Séptima!',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     site: '@NoTM7a',
     title: 'Defendamos la Séptima - Comité Ciudadano',
     description: 'Únete al comité ciudadano dedicado a la defensa y mejora del corredor de la Carrera Séptima en Bogotá. ¡Alza tu voz!',
-    images: ['/social-preview-x.png'],
+    images: ['/og_image_x.png'],
   },
   manifest: '/favicon/site.webmanifest',
   icons: {
