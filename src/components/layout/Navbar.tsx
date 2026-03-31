@@ -37,7 +37,8 @@ export function Navbar() {
             />
           </div>
           <div className="flex flex-col">
-            <span className="font-headline text-lg sm:text-lg md:text-2xl leading-none uppercase tracking-tighter sm:tracking-tight text-primary">Defendamos la Séptima</span>
+            <span className={`font-headline ${
+            !scrolled ? 'text-lg' : 'text-md' } md:text-2xl leading-none uppercase tracking-tighter sm:tracking-tight text-primary`}>Defendamos la Séptima</span>
             <span className="text-[12px] md:text-xs font-bold text-foreground opacity-80 uppercase tracking-widest mt-1 -mb-2 sm:mb-0">Comité Ciudadano</span>
           </div>
         </div>
