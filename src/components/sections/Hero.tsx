@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import { trackEvent } from "@/lib/analytics"
 import Image from "next/image"
 
+import { DONATION_URL } from "@/lib/constants"
+
 export function Hero() {
   return (
     <section className="relative min-h-[calc(100dvh-80px)] md:min-h-[calc(100dvh-100px)] lg:h-[calc(100dvh-100px)] mt-[80px] md:mt-[100px] flex flex-col bg-background border-b-[8px] border-foreground overflow-hidden">
@@ -53,12 +55,12 @@ export function Hero() {
               
               <div className="flex flex-col sm:flex-row gap-3 pt-4 md:pt-6 w-full justify-center lg:justify-start">
                 <Button 
-                  size="lg" 
-                  className="bg-accent text-accent-foreground hover:bg-yellow-400 border-4 border-foreground shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all font-headline text-lg sm:text-xl h-14 md:h-16 px-6 sm:px-8 rounded-none uppercase tracking-wide w-full sm:w-auto"
-                  asChild
+                   size="lg" 
+                   className="bg-accent text-accent-foreground hover:bg-yellow-400 border-4 border-foreground shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all font-headline text-lg sm:text-xl h-14 md:h-16 px-6 sm:px-8 rounded-none uppercase tracking-wide w-full sm:w-auto"
+                   asChild
                 >
                   <a 
-                    href="https://armatuvaca.com/vaca/yc131858YfH96730" 
+                    href={DONATION_URL} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     onClick={() => trackEvent("donate_click", { location: "hero_section" })}
@@ -66,6 +68,7 @@ export function Hero() {
                     Donar para defenderla
                   </a>
                 </Button>
+
                 <Button 
                   variant="outline" 
                   size="lg" 

@@ -4,27 +4,29 @@ import { Button } from "@/components/ui/button"
 import { Instagram, Twitter, MessageCircle } from "lucide-react"
 import { trackEvent } from "@/lib/analytics"
 
+import { SOCIAL_LINKS, SOCIAL_HANDLES } from "@/lib/constants"
+
 export function Social() {
   const socials = [
     {
       name: "X (Twitter)",
       icon: Twitter,
-      url: "https://x.com/NoTM7a",
-      handle: "@NoTM7a",
+      url: SOCIAL_LINKS.TWITTER,
+      handle: SOCIAL_HANDLES.TWITTER,
       color: "bg-background text-foreground hover:bg-black hover:text-white"
     },
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://instagram.com/NoTM7a",
-      handle: "@NoTM7a",
+      url: SOCIAL_LINKS.INSTAGRAM,
+      handle: SOCIAL_HANDLES.INSTAGRAM,
       color: "bg-background text-foreground hover:bg-gradient-to-tr hover:from-purple-600 hover:via-pink-500 hover:to-orange-500 hover:text-white"
     },
     {
       name: "WhatsApp",
       icon: MessageCircle,
-      url: "https://chat.whatsapp.com/DjUXSaJ32LiAEW3arZyGbv",
-      handle: "Comunidad",
+      url: SOCIAL_LINKS.WHATSAPP,
+      handle: SOCIAL_HANDLES.WHATSAPP,
       color: "bg-background text-foreground hover:bg-green-500 hover:text-black"
     }
   ]

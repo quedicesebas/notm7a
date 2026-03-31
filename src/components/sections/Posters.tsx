@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { trackEvent } from "@/lib/analytics"
 import Image from "next/image"
+import { DONATION_URL } from "@/lib/constants"
 
 export function Posters() {
   return (
@@ -59,7 +60,7 @@ export function Posters() {
                 asChild
               >
                 <a 
-                  href="https://armatuvaca.com/vaca/yc131858YfH96730" 
+                  href={DONATION_URL} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => trackEvent("poster_donate_click", { location: "posters_section" })}
@@ -68,6 +69,7 @@ export function Posters() {
                 </a>
               </Button>
             </div>
+
             
             <p className="text-sm font-bold uppercase tracking-widest opacity-60">
               * Envíos disponibles inicialmente en el área del corredor de la Séptima.
