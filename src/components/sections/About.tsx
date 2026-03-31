@@ -1,10 +1,10 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Shield, Target, Users, BookOpen } from "lucide-react"
+import { Shield, Target, Users, BookOpen, Handshake } from "lucide-react"
 
 export function About() {
-  const summary = "Defendamos la Séptima es un comité ciudadano independiente comprometido con el corredor vial más emblemático de Bogotá. Nuestra misión es garantizar que cualquier intervención urbana sea técnica, financiera y socialmente responsable, protegiendo el patrimonio histórico y ambiental mientras aseguramos que la voz de los ciudadanos sea el eje central del desarrollo."
+  const summary = "Somos independientey y comprometidos con la vía más emblemática de Bogotá. Queremos una intervención urbana técnica, financiera y socialmente responsable, protegiendo el el ambiente y patrimonio local, mientras aseguramos que la voz de los ciudadanos sea se escuche."
 
   const objectives = [
     {
@@ -37,13 +37,43 @@ export function About() {
           <div className="w-32 h-2 bg-primary mx-auto" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start mb-24">
-          <div className="space-y-6 bg-secondary text-secondary-foreground p-8 border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)]">
-            <h3 className="text-3xl lg:text-4xl text-accent font-headline uppercase">Nuestra Misión</h3>
-            <p className="text-lg md:text-xl leading-relaxed font-bold">
-              "{summary}"
-            </p>
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start mb-12">
+          {/* Column 1: Mission + Plurality */}
+          <div className="flex flex-col gap-10">
+            <div className="space-y-6 bg-secondary text-secondary-foreground p-8 border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+              <h3 className="text-2xl lg:text-3xl text-accent font-headline uppercase">Nuestra Misión</h3>
+              <p className="text-lg md:text-xl leading-relaxed font-bold">
+                "{summary}"
+              </p>
+            </div>
+
+            {/* Plurality / No Color Block */}
+            <div className="bg-accent border-4 border-foreground p-6 md:p-8 shadow-[8px_8px_0px_rgba(0,0,0,1)] relative overflow-hidden group">
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary opacity-10 rounded-full group-hover:scale-150 transition-transform duration-700" />
+              
+              <div className="relative z-10 flex flex-col gap-6">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0 w-16 h-16 bg-background border-4 border-foreground flex items-center justify-center rotate-3 transform group-hover:rotate-0 transition-transform">
+                    <Handshake className="h-10 w-10 text-primary" strokeWidth={2.5} />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-headline uppercase leading-none">
+                    UN ESPACIO<br/>DE TODOS Y PARA TODOS
+                  </h3>
+                </div>
+                
+                <div className="space-y-3">
+                  <p className="text-lg md:text-xl font-bold leading-tight">
+                    Este es un comité <span className="text-primary italic">sin color político</span>. 
+                  </p>
+                  <p className="text-base md:text-lg font-medium opacity-90 leading-snug">
+                    Aquí son bienvenidos todos los ciudadanos, grupos y organizaciones cívicas, políticas, académicas y demás.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
+
+          {/* Column 2: Objectives Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {objectives.map((obj, i) => (
               <Card key={i} className="border-4 border-foreground shadow-[4px_4px_0px_rgba(0,0,0,1)] rounded-none bg-card hover:bg-muted hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all">
@@ -58,6 +88,7 @@ export function About() {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   )

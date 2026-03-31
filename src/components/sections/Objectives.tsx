@@ -41,7 +41,7 @@ export function Objectives() {
     },
     {
       title: "Protección del Patrimonio",
-      description: "Respetar el carácter emblemático, histórico y cultural de la Carrera Séptima como eje vital de Bogotá.",
+      description: "Respetar el carácter emblemático, histórico y cultural de la Carrera Séptima como eje vital de Bogotá. Evitar la quiebra masiva del comercio y cultura en la zona.",
       icon: Building2,
       color: "text-amber-600",
       bg: "bg-amber-50",
@@ -49,7 +49,7 @@ export function Objectives() {
     },
     {
       title: "Conectividad Sostenible",
-      description: "Fomentar alternativas de transporte limpio que se integren armoniosamente con el entorno residencial y comercial.",
+      description: "Fomentar alternativas de transporte limpio y urbanismo que se integren armoniosamente con el entorno residencial y comercial, en el ej oriental como un corredor multimodal.",
       icon: Leaf,
       color: "text-green-600",
       bg: "bg-green-50",
