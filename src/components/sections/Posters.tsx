@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { trackEvent } from "@/lib/analytics"
 import Image from "next/image"
-import { DONATION_URL } from "@/lib/constants"
+import { DONATION_URL, EXPENSE_REPORT_URL } from "@/lib/constants"
 
 export function Posters() {
   return (
@@ -53,7 +53,7 @@ export function Posters() {
               Haz una donación para apoyar este esfuerzo y te enviaremos a domicilio un kit de carteles impresos. Ayúdanos a mostrar que los vecinos somos quienes decidimos el futuro de nuestro corredor.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+            <div className="flex flex-col gap-6 items-center lg:items-start pt-4">
               <Button 
                 size="lg" 
                 className="bg-accent text-accent-foreground hover:bg-yellow-400 border-4 border-foreground shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] transition-all font-headline text-xl h-16 px-10 rounded-none uppercase tracking-wide w-full sm:w-auto"
@@ -68,7 +68,39 @@ export function Posters() {
                   Donar y recibir carteles
                 </a>
               </Button>
+
+              {/* Campaign Status (Succinct version) */}
+              <div className="w-full space-y-3 bg-white border-2 border-foreground p-4 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                <div className="flex flex-wrap justify-between items-end gap-2">
+                  <span className="font-headline text-sm uppercase tracking-wider">Estado de la Recaudación</span>
+                  <span className="font-bold text-xs uppercase bg-primary text-primary-foreground px-2 py-0.5">Vaca #2 en curso</span>
+                </div>
+                
+                <div className="relative w-full h-6 bg-muted border-2 border-foreground overflow-hidden">
+                  <div 
+                    className="absolute top-0 left-0 h-full bg-accent border-r-2 border-foreground transition-all duration-1000 ease-out" 
+                    style={{ width: '50%' }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center font-bold text-[10px] sm:text-xs uppercase tracking-tighter z-10 text-foreground">
+                    1M Recaudado / 2M Meta Total
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-2 pt-1">
+                  <span className="text-[10px] font-bold uppercase opacity-60">Vaca #1: ¡Meta Alcancada! ($1M)</span>
+                  <a 
+                    href={EXPENSE_REPORT_URL} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[10px] font-bold uppercase underline hover:text-primary transition-colors inline-flex items-center gap-1"
+                    onClick={() => trackEvent("expense_report_click", { location: "posters_section" })}
+                  >
+                    Ver Reporte de Transparencia
+                  </a>
+                </div>
+              </div>
             </div>
+
 
             
             <p className="text-sm font-bold uppercase tracking-widest opacity-60">
