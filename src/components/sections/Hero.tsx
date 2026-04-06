@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button"
 import { trackEvent } from "@/lib/analytics"
 import Image from "next/image"
 
-import { DONATION_URL } from "@/lib/constants"
+import { useFundraising } from "@/hooks/use-fundraising"
 
 export function Hero() {
+  const { donationUrl } = useFundraising();
   return (
     <section className="relative min-h-[calc(100dvh-80px)] md:min-h-[calc(100dvh-100px)] lg:h-[calc(100dvh-100px)] mt-[80px] md:mt-[100px] flex flex-col bg-background border-b-[8px] border-foreground overflow-hidden">
       
@@ -60,7 +61,7 @@ export function Hero() {
                    asChild
                 >
                   <a 
-                    href={DONATION_URL} 
+                    href={donationUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
                     onClick={() => trackEvent("donate_click", { location: "hero_section" })}

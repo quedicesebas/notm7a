@@ -3,9 +3,17 @@
 import { Button } from "@/components/ui/button"
 import { trackEvent } from "@/lib/analytics"
 import Image from "next/image"
-import { DONATION_URL, EXPENSE_REPORT_URL } from "@/lib/constants"
+import { EXPENSE_REPORT_URL, FUNDRAISING_METRICS } from "@/lib/constants"
+import { formatToMillions } from "@/lib/fundraising"
+import { useFundraising } from "@/hooks/use-fundraising"
 
 export function Posters() {
+  const { currentAmount, activeVacaIndex, donationUrl } = useFundraising();
+
+  const percentage = Math.min(100, Math.floor((currentAmount / FUNDRAISING_METRICS.TARGET_AMOUNT) * 100));
+  const displayCurrent = formatCurrency(currentAmount);
+  const displayTarget = formatToMillions(FUNDRAISING_METRICS.TARGET_AMOUNT);
+
   return (
     <section id="posters" className="py-24 bg-background border-b-[8px] border-foreground overflow-hidden">
       <div className="container mx-auto px-4">
@@ -60,7 +68,7 @@ export function Posters() {
                 asChild
               >
                 <a 
-                  href={DONATION_URL} 
+                  href={donationUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   onClick={() => trackEvent("poster_donate_click", { location: "posters_section" })}
@@ -73,21 +81,21 @@ export function Posters() {
               <div className="w-full space-y-3 bg-white border-2 border-foreground p-4 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                 <div className="flex flex-wrap justify-between items-end gap-2">
                   <span className="font-headline text-sm uppercase tracking-wider">Estado de la Recaudación</span>
-                  <span className="font-bold text-xs uppercase bg-primary text-primary-foreground px-2 py-0.5">Vaca #2 en curso</span>
+                  <span className="font-bold text-xs uppercase bg-primary text-primary-foreground px-2 py-0.5">Vaca #{activeVacaIndex} en curso</span>
                 </div>
                 
                 <div className="relative w-full h-6 bg-muted border-2 border-foreground overflow-hidden">
                   <div 
-                    className="absolute top-0 left-0 h-full bg-accent border-r-2 border-foreground transition-all duration-1000 ease-out" 
-                    style={{ width: '50%' }}
+                    className="absolute top-0 left-0 h-full bg-accent border-foreground transition-all duration-1000 ease-out" 
+                    style={{ width: `${percentage}%` }}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center font-bold text-[10px] sm:text-xs uppercase tracking-tighter z-10 text-foreground">
-                    1M Recaudado / 2M Meta Total
+                  <div className="absolute inset-0 flex items-center px-2 font-bold text-[14px] sm:text-xs uppercase tracking-tighter z-10 text-foreground">
+                    ${percentage} % <span className="font-normal mx-1">(COP {displayCurrent})</span> de $ {displayTarget}
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-2 pt-1">
-                  <span className="text-[10px] font-bold uppercase opacity-60">Vaca #1: ¡Meta Alcancada! ($1M)</span>
+                  <span className="text-[10px] font-bold uppercase opacity-60">{FUNDRAISING_METRICS.VACA_1_SUMMARY}</span>
                   <a 
                     href={EXPENSE_REPORT_URL} 
                     target="_blank" 
@@ -113,3 +121,13 @@ export function Posters() {
     </section>
   )
 }
+function formatCurrency(amount: number) {
+  const formatted = new Intl.NumberFormat('es-CO', {
+  style: 'currency',
+  currency: 'COP',
+  maximumFractionDigits: 0,
+}).format(amount);
+
+  return formatted;
+}
+

@@ -6,9 +6,10 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { trackEvent } from "@/lib/analytics"
 
-import { DONATION_URL } from "@/lib/constants"
+import { useFundraising } from "@/hooks/use-fundraising"
 
 export function Navbar() {
+  const { donationUrl } = useFundraising()
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -52,7 +53,7 @@ export function Navbar() {
             className="bg-accent text-accent-foreground hover:bg-yellow-400 border-2 border-foreground shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all font-headline text-lg h-12 rounded-none uppercase tracking-wide px-8"
           >
             <a 
-              href={DONATION_URL} 
+              href={donationUrl} 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => trackEvent("donate_click", { location: "navbar_desktop" })}
@@ -69,7 +70,7 @@ export function Navbar() {
             className="bg-accent text-accent-foreground hover:bg-yellow-400 border-2 border-foreground shadow-[3px_3px_0px_rgba(0,0,0,1)] transition-all font-headline text-lg rounded-none uppercase tracking-tight sm:tracking-wide px-3 sm:px-4 h-10"
           >
             <a 
-              href={DONATION_URL} 
+              href={donationUrl} 
               target="_blank" 
               rel="noopener noreferrer"
               onClick={() => trackEvent("donate_click", { location: "navbar_mobile" })}
