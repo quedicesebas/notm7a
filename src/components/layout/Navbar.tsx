@@ -47,7 +47,6 @@ export function Navbar() {
         <div className="hidden md:flex items-center gap-8 shrink-0">
           <a href="#about" className="font-headline text-lg hover:text-primary transition-colors text-foreground uppercase tracking-wide">Sobre Nosotros</a>
           <a href="#objectives" className="font-headline text-lg hover:text-primary transition-colors text-foreground uppercase tracking-wide">Objetivos</a>
-          <a href="#posters" className="font-headline text-lg hover:text-primary transition-colors text-foreground uppercase tracking-wide">Carteles</a>
           <Button 
             asChild
             className="bg-accent text-accent-foreground hover:bg-yellow-400 border-2 border-foreground shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transition-all font-headline text-lg h-12 rounded-none uppercase tracking-wide px-8"
