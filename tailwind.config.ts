@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'], // Keep Inter for small text for readability
+        body: ['var(--font-inter)', 'inter', 'sans-serif'], // Keep Inter for small text for readability
         headline: ['var(--font-motter)', 'sans-serif'], // Use Motter Corpus for heavy titles
         code: ['monospace'],
       },

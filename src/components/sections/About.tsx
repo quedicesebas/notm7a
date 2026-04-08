@@ -43,7 +43,7 @@ export function About() {
             <div className="space-y-6 bg-secondary text-secondary-foreground p-8 border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)]">
               <h3 className="text-2xl lg:text-3xl text-accent font-headline uppercase">Nuestra Misión</h3>
               <p className="text-lg md:text-xl leading-relaxed font-bold">
-                "{summary}"
+                &quot;{summary}&quot;
               </p>
             </div>
 
