@@ -93,14 +93,10 @@ export function Objectives() {
           <div className="flex justify-center bg-background border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)] p-4 md:p-8">
             <blockquote className="twitter-tweet" data-media-max-width="560">
               <p lang="es" dir="ltr">
-                Tres alcaldías diseñando y no pudieron si quiera porponer algo así para nuestra Séptima😔<br/><br/>
-                Así se diseña en Vitoria (País Vasco)<br/>
-                ✅Priorizar el Transporte Público<br/>
-                ✅Infraestructura ordenada para la bici<br/>
-                ✅BRT mejor pensado <a href="https://t.co/TWvHntNMHG">pic.twitter.com/TWvHntNMHG</a>
+                Con renders tramposos disfrazaron la falsa dicotomía: TM o nada, abandono.<br /><br />También sabemos dibujar, pero para soñar. ¡No más chantaje!<br /><br />Mira la diferencia entre seguir con &quot;lo que tocó&quot; (TM por la 7.ª 🚍) y uno de los sueños posibles🌱🚋. ¿Va?<br /><br />✊ Únete, <a href="https://t.co/SHUWhsxcOI">https://t.co/SHUWhsxcOI</a> <a href="https://t.co/BIc4NqPy8w">pic.twitter.com/BIc4NqPy8w</a>
               </p>
-              &mdash; Defendamos la Séptima - Comité Ciudadano (@NoTM7a) 
-              <a href="https://twitter.com/NoTM7a/status/2031125918316454302?ref_src=twsrc%5Etfw">March 9, 2026</a>
+              &mdash; Defendamos la Séptima - Comité Ciudadano (@NoTM7a)
+              <a href="https://twitter.com/NoTM7a/status/2042039854016471248?ref_src=twsrc%5Etfw">April 9, 2026</a>
             </blockquote>
           </div>
         </div>
