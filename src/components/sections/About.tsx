@@ -4,28 +4,28 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Shield, Target, Users, BookOpen, Handshake } from "lucide-react"
 
 export function About() {
-  const summary = "Somos independientey y comprometidos con la vía más emblemática de Bogotá. Queremos una intervención urbana técnica, financiera y socialmente responsable, protegiendo el el ambiente y patrimonio local, mientras aseguramos que la voz de los ciudadanos sea se escuche."
+  const summary = "Somos Defendamos la Séptima, un comité ciudadano independiente con enfoque técnico-social activo desde 2017. Defendemos el derecho a una ciudad digna, con espacios, movilidad de calidad y ambiente sano, sin el falso chantaje de la troncal."
 
   const objectives = [
     {
-      title: "Vanguardia técnica",
-      description: "TM es una solución vieja e insuficiente. Hay muchas y mejores opciones para usar el preciado bien que es la superficie.",
+      title: "Independencia",
+      description: "Sin ataduras políticas ni miedo a decir la verdad. Denunciamos los riesgos de corrupción y los escandalosos sobrecostos.",
       icon: Shield
     },
     {
-      title: "Participación",
-      description: "Creamos espacios para que la ciudadanía sea parte activa de las decisiones urbanas.",
+      title: "Enfoque Técnico",
+      description: "Las promesas de ahorro de tiempo son una falacia. Insistir en una troncal saturada es un despropósito que empeorará la movilidad.",
+      icon: BookOpen
+    },
+    {
+      title: "Defensa Urbana",
+      description: "Protegemos nuestro entorno. Rechazamos la tala de árboles y las estaciones que crean muros y dividen esta histórica vía.",
       icon: Users
     },
     {
-      title: "Sostenibilidad",
-      description: "Defendemos modelos de movilidad que respeten el entorno, la salud y el patrimonio.",
+      title: "Opciones Reales",
+      description: "Fomentamos el uso razonable del tren ligero LRT, buses eléctricos y un verdadero corredor verde integrado con el metro.",
       icon: Target
-    },
-    {
-      title: "Veeduría",
-      description: "Actuamos como vigilantes técnicos frente a los proyectos de movilidad de la ciudad.",
-      icon: BookOpen
     }
   ]
 
@@ -66,7 +66,7 @@ export function About() {
                     Este es un comité <span className="text-primary italic">sin color político</span>. 
                   </p>
                   <p className="text-base md:text-lg font-medium opacity-90 leading-snug">
-                    Aquí son bienvenidos todos los ciudadanos, grupos y organizaciones cívicas, políticas, académicas y demás.
+                    Curiosamente, <span className="font-bold underline decoration-background decoration-2">todos los alcaldes de este siglo han sido pro-TransMilenio</span>, bloqueando de forma activa alternativas modernas (como los trenes ligeros o la extensión de rutas duales). Por eso aquí son bienvenidos todos los ciudadanos, organizaciones y actores cívicos que busquen romper este ciclo.
                   </p>
                 </div>
               </div>
