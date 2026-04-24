@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { trackEvent } from "@/lib/analytics"
-import Image from "next/image"
-import { EXPENSE_REPORT_URL, FUNDRAISING_METRICS } from "@/lib/constants"
-import { formatToMillions } from "@/lib/fundraising"
-import { useFundraising } from "@/hooks/use-fundraising"
+import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/lib/analytics";
+import Image from "next/image";
+import { EXPENSE_REPORT_URL, FUNDRAISING_METRICS } from "@/lib/constants";
+import { formatToMillions } from "@/lib/fundraising";
+import { useFundraising } from "@/hooks/use-fundraising";
 
 export function Posters() {
   const { currentAmount, activeVacaIndex, donationUrl } = useFundraising();
@@ -18,13 +18,12 @@ export function Posters() {
     <section id="posters" className="py-24 bg-background border-b-[8px] border-foreground overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          
           {/* Visual Side (The Poster) */}
           <div className="w-full lg:w-1/2 flex justify-center order-2 lg:order-1">
             <div className="relative group w-full max-w-2xl">
               {/* Brutalist Shadow/Backing */}
               <div className="absolute inset-0 bg-primary translate-x-4 translate-y-4 border-4 border-foreground" />
-              
+
               {/* Image Container */}
               <div className="relative border-4 border-foreground bg-white p-4 sm:p-6 rotate-2 group-hover:rotate-0 transition-transform duration-300">
                 <div className="relative aspect-[1.414/1] w-full min-w-[300px]">
@@ -54,22 +53,23 @@ export function Posters() {
             </div>
 
             <p className="text-xl md:text-2xl font-bold leading-tight">
-              Queremos volver a llenar las ventanas de la Carrera Séptima con nuestra voz ciudadana. 
+              Queremos volver a llenar las ventanas de la Carrera Séptima con nuestra voz ciudadana.
             </p>
-            
+
             <p className="text-lg md:text-xl font-medium opacity-90 leading-snug">
-              Haz una donación para apoyar este esfuerzo y te enviaremos a domicilio un kit de carteles impresos. Ayúdanos a mostrar que los vecinos somos quienes decidimos el futuro de nuestro corredor.
+              Haz una donación para apoyar este esfuerzo y te enviaremos a domicilio un kit de carteles impresos.
+              Ayúdanos a mostrar que los vecinos somos quienes decidimos el futuro de nuestro corredor.
             </p>
 
             <div className="flex flex-col gap-6 items-center lg:items-start pt-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-accent text-accent-foreground hover:bg-yellow-400 border-4 border-foreground shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[3px_3px_0px_rgba(0,0,0,1)] transition-all font-headline text-xl h-16 px-10 rounded-none uppercase tracking-wide w-full sm:w-auto"
                 asChild
               >
-                <a 
-                  href={donationUrl} 
-                  target="_blank" 
+                <a
+                  href={donationUrl}
+                  target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackEvent("poster_donate_click", { location: "posters_section" })}
                 >
@@ -81,24 +81,26 @@ export function Posters() {
               <div className="w-full space-y-3 bg-white border-2 border-foreground p-4 shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                 <div className="flex flex-wrap justify-between items-end gap-2">
                   <span className="font-headline text-sm uppercase tracking-wider">Estado de la Recaudación</span>
-                  <span className="font-bold text-xs uppercase bg-primary text-primary-foreground px-2 py-0.5">Vaca #{activeVacaIndex} en curso</span>
+                  <span className="font-bold text-xs uppercase bg-primary text-primary-foreground px-2 py-0.5">
+                    Vaca #{activeVacaIndex} en curso
+                  </span>
                 </div>
-                
+
                 <div className="relative w-full h-6 bg-muted border-2 border-foreground overflow-hidden">
-                  <div 
-                    className="absolute top-0 left-0 h-full bg-accent border-foreground transition-all duration-1000 ease-out" 
+                  <div
+                    className="absolute top-0 left-0 h-full bg-accent border-foreground transition-all duration-1000 ease-out"
                     style={{ width: `${percentage}%` }}
                   />
                   <div className="absolute inset-0 flex items-center px-2 font-bold text-[14px] sm:text-xs uppercase tracking-tighter z-10 text-foreground">
-                    ${percentage} % <span className="font-normal mx-1">(COP {displayCurrent})</span> de $ {displayTarget}
+                    ${percentage} % <span className="font-normal mx-1">(COP {displayCurrent})</span> de ${" "}
+                    {displayTarget}
                   </div>
                 </div>
 
                 <div className="flex flex-col sm:flex-row justify-between items-center gap-2 pt-1">
-                  <span className="text-[10px] font-bold uppercase opacity-60">{FUNDRAISING_METRICS.VACA_1_SUMMARY}</span>
-                  <a 
-                    href={EXPENSE_REPORT_URL} 
-                    target="_blank" 
+                  <a
+                    href={EXPENSE_REPORT_URL}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-[10px] font-bold uppercase underline hover:text-primary transition-colors inline-flex items-center gap-1"
                     onClick={() => trackEvent("expense_report_click", { location: "posters_section" })}
@@ -109,25 +111,22 @@ export function Posters() {
               </div>
             </div>
 
-
-            
             <p className="text-sm font-bold uppercase tracking-widest opacity-60">
-              * Envíos disponibles inicialmente en el área del corredor de la Séptima.
+              * Envíos inicialmente en el área del corredor de la Séptima. Se pueden recoger en la 8 con 65 y 7a con
+              124.
             </p>
           </div>
-
         </div>
       </div>
     </section>
-  )
+  );
 }
 function formatCurrency(amount: number) {
-  const formatted = new Intl.NumberFormat('es-CO', {
-  style: 'currency',
-  currency: 'COP',
-  maximumFractionDigits: 0,
-}).format(amount);
+  const formatted = new Intl.NumberFormat("es-CO", {
+    style: "currency",
+    currency: "COP",
+    maximumFractionDigits: 0,
+  }).format(amount);
 
   return formatted;
 }
-

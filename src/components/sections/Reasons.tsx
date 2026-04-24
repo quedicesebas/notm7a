@@ -33,7 +33,7 @@ function ReasonCard({
   );
 }
 
-export function Objectives() {
+export function Reasons() {
   useEffect(() => {
     // Carga el script de Twitter para renderizar el embed
     const script = document.createElement("script");
@@ -51,7 +51,7 @@ export function Objectives() {
   }, []);
 
   return (
-    <section id="objectives" className="py-24 bg-background border-b-[8px] border-foreground">
+    <section id="reasons" className="py-24 bg-background border-b-[8px] border-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-20 space-y-6">
           <h2 className="text-3xl md:text-5xl font-headline uppercase tracking-wide text-foreground">

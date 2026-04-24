@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { MessageCircle, Instagram, Twitter } from "lucide-react"
-import { trackEvent } from "@/lib/analytics"
+import { MessageCircle, Instagram, Twitter } from "lucide-react";
+import { trackEvent } from "@/lib/analytics";
+import { SOCIAL_LINKS } from "@/lib/constants";
 
 export function Footer() {
   return (
     <footer className="bg-foreground text-background py-8 border-t-[8px] border-foreground w-full">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          
           <div className="text-center md:text-left">
             <h2 className="font-headline text-2xl md:text-3xl lg:text-4xl uppercase tracking-wider text-background">
               SOÑEMOS OTRA SÉPTIMA
@@ -20,9 +20,9 @@ export function Footer() {
 
           <div className="flex flex-col items-center md:items-end gap-4">
             <div className="flex items-center gap-6">
-              <a 
-                href="https://instagram.com/notm7a" 
-                target="_blank" 
+              <a
+                href="https://instagram.com/notm7a"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors hover:scale-110 transform"
                 aria-label="Instagram"
@@ -30,9 +30,9 @@ export function Footer() {
               >
                 <Instagram className="h-10 w-10" />
               </a>
-              <a 
-                href="https://twitter.com/notm7a" 
-                target="_blank" 
+              <a
+                href={SOCIAL_LINKS.TWITTER}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary transition-colors hover:scale-110 transform"
                 aria-label="X (Twitter)"
@@ -40,15 +40,13 @@ export function Footer() {
               >
                 <Twitter className="h-10 w-10" />
               </a>
-              <div className="font-headline text-2xl md:text-3xl tracking-wider">
-                @NoTM7a
-              </div>
+              <div className="font-headline text-2xl md:text-3xl tracking-wider">@NoTM7a</div>
             </div>
-            
-            <a 
-              href="https://wa.me/573006609565" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+
+            <a
+              href="https://wa.me/573006609565"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-green-400 transition-colors font-bold text-lg"
               onClick={() => trackEvent("contact_click", { method: "whatsapp", location: "footer" })}
             >
@@ -56,23 +54,39 @@ export function Footer() {
               Escríbenos al WhatsApp
             </a>
           </div>
-
         </div>
-        
+
         <div className="mt-12 pt-6 border-t-[2px] border-white/20 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-4">
           <div className="text-center md:text-left">
             <p>© {new Date().getFullYear()} Defendamos la Séptima - Comité Ciudadano.</p>
           </div>
           <div className="text-center md:text-right flex flex-col items-center md:items-end gap-1">
-             <div>
-               Hecho con ❤️ por voluntarios. Es un proyecto <a href="https://github.com/quedicesebas/notm7a" target="_blank" rel="noopener" className="hover:text-white underline">Open Source</a>
-             </div>
-             <div>
-               Icons made from <a href="https://www.onlinewebfonts.com/icon" target="_blank" rel="noopener noreferrer" className="hover:text-white underline">svg icons</a> is licensed by CC BY 4.0
-             </div>
+            <div>
+              Hecho con ❤️ por voluntarios. Es un proyecto{" "}
+              <a
+                href="https://github.com/quedicesebas/notm7a"
+                target="_blank"
+                rel="noopener"
+                className="hover:text-white underline"
+              >
+                Open Source
+              </a>
+            </div>
+            <div>
+              Icons made from{" "}
+              <a
+                href="https://www.onlinewebfonts.com/icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white underline"
+              >
+                svg icons
+              </a>{" "}
+              is licensed by CC BY 4.0
+            </div>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
