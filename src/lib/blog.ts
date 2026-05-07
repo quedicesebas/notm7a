@@ -10,6 +10,7 @@ export type BlogPostMetadata = {
   excerpt: string;
   author: string;
   slug: string;
+  image?: string;
 };
 
 export type BlogPost = {

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
 import { ArrowRight, Newspaper } from 'lucide-react';
@@ -28,30 +29,41 @@ export function RecentPosts() {
           {posts.map((post) => (
             <article 
               key={post.slug} 
-              className="bg-card border-4 border-foreground p-6 shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all flex flex-col group h-full"
+              className="bg-card border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-all flex flex-col group h-full overflow-hidden"
             >
-              <div className="mb-4">
-                <span className="text-primary font-bold text-xs tracking-widest uppercase mb-2 block">
-                  {new Date(post.date).toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' })}
-                </span>
-                <h3 className="text-xl md:text-2xl font-headline uppercase leading-tight group-hover:text-primary transition-colors">
-                  <Link href={`/blog/${post.slug}`}>
-                    {post.title}
-                  </Link>
-                </h3>
-              </div>
+              {post.image && (
+                <div className="w-full h-48 md:h-56 relative border-b-4 border-foreground overflow-hidden">
+                  <Image 
+                    src={post.image} 
+                    alt={post.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              )}
+              <div className="p-6 flex flex-col flex-1">
+                <div className="mb-4">
+                  <span className="text-primary font-bold text-xs tracking-widest uppercase mb-2 block">
+                    {new Date(post.date).toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  </span>
+                  <h3 className="text-xl md:text-2xl font-headline uppercase leading-tight group-hover:text-primary transition-colors">
+                    <Link href={`/blog/${post.slug}`} className="before:absolute before:inset-0">
+                      {post.title}
+                    </Link>
+                  </h3>
+                </div>
               
               <p className="text-base font-medium text-muted-foreground mb-6 line-clamp-4 flex-1">
                 {post.excerpt}
               </p>
               
-              <div className="mt-auto pt-4 border-t-2 border-foreground/10 flex justify-end">
-                <Link 
-                  href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-2 font-bold uppercase tracking-wider text-sm hover:text-primary transition-colors"
-                >
-                  Leer más <ArrowRight className="h-4 w-4" />
-                </Link>
+                <div className="mt-auto pt-4 border-t-2 border-foreground/10 flex justify-end">
+                  <span 
+                    className="inline-flex items-center gap-2 font-bold uppercase tracking-wider text-sm group-hover:text-primary transition-colors"
+                  >
+                    Leer más <ArrowRight className="h-4 w-4" />
+                  </span>
+                </div>
               </div>
             </article>
           ))}

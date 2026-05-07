@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 
@@ -74,6 +75,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <span className="uppercase tracking-wide">Por: {post.metadata.author}</span>
               </div>
             </header>
+
+            {/* Cover Image */}
+            {post.metadata.image && (
+              <div className="w-full h-64 md:h-96 relative border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)] mb-12 overflow-hidden">
+                <Image 
+                  src={post.metadata.image} 
+                  alt={post.metadata.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
 
             {/* Article Content */}
             <article className="prose prose-lg md:prose-xl prose-stone max-w-none prose-headings:font-headline prose-headings:uppercase prose-headings:tracking-wide prose-a:text-primary hover:prose-a:text-primary/80 prose-strong:font-bold prose-img:border-4 prose-img:border-foreground prose-img:shadow-[8px_8px_0px_rgba(0,0,0,1)]">
