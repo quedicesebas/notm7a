@@ -10,9 +10,10 @@ import { useFundraising } from "@/hooks/use-fundraising";
 export function Posters() {
   const { currentAmount, activeVacaIndex, donationUrl } = useFundraising();
 
-  const percentage = Math.min(100, Math.floor((currentAmount / FUNDRAISING_METRICS.TARGET_AMOUNT) * 100));
+  const targetAmount = FUNDRAISING_METRICS.IDS.length * 1000000;
+  const percentage = Math.min(100, Math.floor((currentAmount / targetAmount) * 100));
   const displayCurrent = formatCurrency(currentAmount);
-  const displayTarget = formatToMillions(FUNDRAISING_METRICS.TARGET_AMOUNT);
+  const displayTarget = formatToMillions(targetAmount);
 
   return (
     <section id="posters" className="py-24 bg-background border-b-[8px] border-foreground overflow-hidden">
