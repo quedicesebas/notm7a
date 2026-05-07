@@ -45,13 +45,22 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <main className="flex-1 bg-background pt-32 pb-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            {/* Back to blog button */}
-            <Link 
-              href="/blog" 
-              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider mb-8 hover:text-primary transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" /> Volver al blog
-            </Link>
+            {/* Breadcrumb Navigation */}
+            <div className="flex items-center gap-6 mb-8 flex-wrap">
+              <Link 
+                href="/" 
+                className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors"
+              >
+                <ArrowLeft className="h-4 w-4" /> Inicio
+              </Link>
+              <span className="text-muted-foreground font-bold">/</span>
+              <Link 
+                href="/blog" 
+                className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider hover:text-primary transition-colors"
+              >
+                Blog
+              </Link>
+            </div>
 
             {/* Article Header */}
             <header className="mb-12 border-b-4 border-foreground pb-8">

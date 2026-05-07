@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowLeft } from 'lucide-react';
 
 export const metadata = {
   title: 'Blog - Defendamos la Séptima',
@@ -19,6 +19,12 @@ export default function BlogPage() {
       <main className="flex-1 bg-background pt-32 pb-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-4 mb-16">
+            <Link 
+              href="/" 
+              className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider mb-4 hover:text-primary transition-colors"
+            >
+              <ArrowLeft className="h-4 w-4" /> Volver al inicio
+            </Link>
             <h1 className="text-4xl md:text-6xl text-foreground font-headline uppercase tracking-wide">
               Blog / Noticias
             </h1>

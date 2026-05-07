@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Reasons } from "@/components/sections/Reasons";
 import { Join } from "@/components/sections/Join";
+import { RecentPosts } from "@/components/sections/RecentPosts";
 import { Posters } from "@/components/sections/Posters";
 import { Footer } from "@/components/layout/Footer";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Reasons />
       <About />
+      <RecentPosts />
       <Posters />
       <Join />
       <Footer />
