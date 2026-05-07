@@ -25,9 +25,30 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const defaultImage = "/og_image.png";
+  const postImage = post.metadata.image || defaultImage;
+
   return {
     title: `${post.metadata.title} - Defendamos la Séptima`,
     description: post.metadata.excerpt,
+    openGraph: {
+      title: post.metadata.title,
+      description: post.metadata.excerpt,
+      images: [
+        {
+          url: postImage,
+        },
+      ],
+      type: 'article',
+      publishedTime: post.metadata.date,
+      authors: [post.metadata.author],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.metadata.title,
+      description: post.metadata.excerpt,
+      images: [postImage],
+    },
   };
 }
 

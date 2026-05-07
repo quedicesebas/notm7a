@@ -25,7 +25,13 @@ export function RecentPosts() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className={`grid gap-8 mb-16 ${
+          posts.length === 1 
+            ? 'grid-cols-1 md:max-w-md mx-auto' 
+            : posts.length === 2 
+              ? 'grid-cols-1 md:grid-cols-2 md:max-w-4xl mx-auto' 
+              : 'md:grid-cols-2 lg:grid-cols-3'
+        }`}>
           {posts.map((post) => (
             <article 
               key={post.slug} 
