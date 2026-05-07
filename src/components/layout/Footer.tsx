@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle, Instagram, Twitter } from "lucide-react";
+import { MessageCircle, Instagram, Twitter, Mail } from "lucide-react";
 import { trackEvent } from "@/lib/analytics";
 import { SOCIAL_LINKS } from "@/lib/constants";
 
@@ -52,6 +52,15 @@ export function Footer() {
             >
               <MessageCircle className="h-5 w-5" />
               Escríbenos al WhatsApp
+            </a>
+
+            <a
+              href={`mailto:${SOCIAL_LINKS.EMAIL}`}
+              className="flex items-center gap-2 hover:text-primary transition-colors font-bold text-lg"
+              onClick={() => trackEvent("contact_click", { method: "email", location: "footer" })}
+            >
+              <Mail className="h-5 w-5" />
+              {SOCIAL_LINKS.EMAIL}
             </a>
           </div>
         </div>
