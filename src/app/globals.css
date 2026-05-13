@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,7 +17,7 @@
     --muted: 46 30% 85%;
     --muted-foreground: 0 0% 40%;
     --accent: 55 93% 59%; /* Solid Yellow (#F6E935 from SVG) */
-    --accent-foreground: 0 0% 5%; 
+    --accent-foreground: 0 0% 5%;
     --destructive: 358 84% 52%;
     --destructive-foreground: 46 45% 95%;
     --border: 0 0% 5%; /* Heavy black borders */
@@ -35,7 +34,12 @@
   body {
     @apply bg-background text-foreground font-body antialiased;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-headline font-bold tracking-tight;
   }
 }
@@ -51,4 +55,28 @@
 .bg-accent::selection {
   background-color: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
+}
+
+.react-tweet-theme {
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.react-tweet-theme article {
+  padding: 0;
+}
+.react-tweet-theme article > div[class^="tweet-media-module"] {
+  margin: 0;
+  border-radius: 0;
+}
+
+/* React Tweet: Hide everything except media */
+.react-tweet-theme article > div[class^="tweet-header-module"],
+.react-tweet-theme article > div[class^="tweet-body-module"],
+.react-tweet-theme article > p, /* Because [class^="tweet-body-module"] is not working for hide the text */
+.react-tweet-theme article > div[class^="tweet-info-module"],
+.react-tweet-theme article > div[class^="tweet-actions-module"],
+.react-tweet-theme article > div[class^="tweet-replies-module"] {
+  display: none !important;
 }

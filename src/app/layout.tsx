@@ -70,7 +70,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-
       <body className={`font-body antialiased ${motterCorpus.variable} ${inter.variable}`}>
         <FundraisingProvider>
           <FirebaseAnalytics />
