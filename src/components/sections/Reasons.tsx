@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Ban, Footprints, Building2, Leaf, TrainFront, Trees, HandCoins, Pickaxe } from "lucide-react";
+import { Tweet } from "react-tweet";
 
 function ReasonCard({
   title,
@@ -34,22 +34,6 @@ function ReasonCard({
 }
 
 export function Reasons() {
-  useEffect(() => {
-    // Carga el script de Twitter para renderizar el embed
-    const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.async = true;
-    script.charset = "utf-8";
-    document.body.appendChild(script);
-
-    return () => {
-      // Limpieza al desmontar el componente
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
-
   return (
     <section id="reasons" className="py-24 bg-background border-b-[8px] border-foreground">
       <div className="container mx-auto px-4">
@@ -90,7 +74,7 @@ export function Reasons() {
               congestión.
             </p>
             <Image
-              src="/encuestamovilidad_brutalist.png"
+              src="/encuestamovilidad_brutalist.webp"
               alt="Gráfico de TM Fracasó"
               width={800}
               height={600}
@@ -113,7 +97,7 @@ export function Reasons() {
               árboles caerán y recuprar su función tomará décadas, si es que ocurre.
             </p>
             <Image
-              src="/arbol_talado_icon.png"
+              src="/arbol_talado_icon.webp"
               alt="Icono gráfico de árbol talado"
               width={400}
               height={400}
@@ -136,7 +120,7 @@ export function Reasons() {
               </span>
             </p>
             <Image
-              src="/costo_km_brutalist.png"
+              src="/costo_km_brutalist.webp"
               alt="Gráfico de incremento costo por kilómetro Fase I a Fase IV"
               width={800}
               height={600}
@@ -153,7 +137,7 @@ export function Reasons() {
               No han sembrado un arbol en años, <span className="underline">es hora de trabajar</span>.
             </p>
             <Image
-              src="/septima_brutalist.png"
+              src="/septima_brutalist.webp"
               alt="Gráfico de mejoras para la Séptima sin TM"
               width={800}
               height={600}
@@ -172,24 +156,10 @@ export function Reasons() {
               Mira la pesadilla y uno de los sueños posibles para la Séptima.
             </p>
           </div>
-          <div className="flex justify-center bg-background border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)] p-4 md:p-8">
-            <blockquote className="twitter-tweet" data-media-max-width="560">
-              <p lang="es" dir="ltr">
-                Con renders tramposos disfrazaron la falsa dicotomía: TM o nada, abandono.
-                <br />
-                <br />
-                También sabemos dibujar, pero para soñar. ¡No más chantaje!
-                <br />
-                <br />
-                Mira la diferencia entre seguir con &quot;lo que tocó&quot; (TM por la 7.ª 🚍) y uno de los sueños
-                posibles🌱🚋. ¿Va?
-                <br />
-                <br />✊ Únete, <a href="https://t.co/SHUWhsxcOI">https://t.co/SHUWhsxcOI</a>{" "}
-                <a href="https://t.co/BIc4NqPy8w">pic.twitter.com/BIc4NqPy8w</a>
-              </p>
-              &mdash; Defendamos la Séptima - Comité Ciudadano (@NoTM7a)
-              <a href="https://twitter.com/NoTM7a/status/2042039854016471248?ref_src=twsrc%5Etfw">April 9, 2026</a>
-            </blockquote>
+          <div className="flex justify-center bg-background border-4 border-foreground shadow-[8px_8px_0px_rgba(0,0,0,1)] p-4 md:p-8 [&>div]:m-0 [&>div]:w-full">
+            <div data-theme="light" className="contents">
+              <Tweet id="2042039854016471248" />
+            </div>
           </div>
         </div>
 
