@@ -70,9 +70,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <head>
-        <link rel="preload" as="image" href="/crowd-silhouette.webp" fetchPriority="high" />
-      </head>
       <body className={`font-body antialiased ${motterCorpus.variable} ${inter.variable}`}>
         <FundraisingProvider>
           <FirebaseAnalytics />
