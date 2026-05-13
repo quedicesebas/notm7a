@@ -6,6 +6,7 @@ import Image from "next/image";
 import { trackEvent } from "@/lib/analytics";
 
 import { useFundraising } from "@/hooks/use-fundraising";
+import Link from "next/link";
 
 export function Navbar() {
   const { donationUrl } = useFundraising();
@@ -57,12 +58,12 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-8 shrink-0">
-          <a
-            href="#about"
+          <Link
+            href="/blog"
             className="font-headline text-lg hover:text-primary transition-colors text-foreground uppercase tracking-wide"
           >
-            Sobre Nosotros
-          </a>
+            Blog
+          </Link>
           <a
             href="#reasons"
             className="font-headline text-lg hover:text-primary transition-colors text-foreground uppercase tracking-wide"
