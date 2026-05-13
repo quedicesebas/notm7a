@@ -29,7 +29,7 @@ export function Hero() {
                   src="/logo.svg"
                   alt="Símbolo de No a la Troncal de la Séptima"
                   fill
-                  className="object-contain drop-shadow-2xl"
+                  className="object-contain"
                   priority
                 />
               </div>
