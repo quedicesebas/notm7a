@@ -72,7 +72,7 @@ export function Reasons() {
               congestión.
             </p>
             <Image
-              src="/encuestamovilidad_brutalist.webp"
+              src="/encuestamovilidad_brutalist_v2.webp"
               alt="Gráfico de TM Fracasó"
               width={800}
               height={600}
@@ -95,7 +95,7 @@ export function Reasons() {
               árboles caerán y recuprar su función tomará décadas, si es que ocurre.
             </p>
             <Image
-              src="/arbol_talado_icon.webp"
+              src="/arbol_talado_icon_v2.webp"
               alt="Icono gráfico de árbol talado"
               width={400}
               height={400}
@@ -118,7 +118,7 @@ export function Reasons() {
               </span>
             </p>
             <Image
-              src="/costo_km_brutalist.webp"
+              src="/costo_km_brutalist_v2.webp"
               alt="Gráfico de incremento costo por kilómetro Fase I a Fase IV"
               width={800}
               height={600}
@@ -135,7 +135,7 @@ export function Reasons() {
               No han sembrado un arbol en años, <span className="underline">es hora de trabajar</span>.
             </p>
             <Image
-              src="/septima_brutalist.webp"
+              src="/septima_brutalist_v2.webp"
               alt="Gráfico de mejoras para la Séptima sin TM"
               width={800}
               height={600}
