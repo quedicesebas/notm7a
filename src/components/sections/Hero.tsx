@@ -91,7 +91,7 @@ export function Hero() {
       <div
         className="absolute -bottom-4 sm:bottom-10 left-0 w-full h-96 sm:h-48 md:h-64 opacity-5 pointer-events-none z-0 select-none"
         style={{
-          backgroundImage: "url(/crowd-silhouette.svg)",
+          backgroundImage: "url(/crowd-silhouette.webp)",
           backgroundSize: "contain",
           backgroundPosition: "bottom",
           backgroundRepeat: "repeat-x",
