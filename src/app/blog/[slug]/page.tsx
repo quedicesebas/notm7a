@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft } from 'lucide-react';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import { formatDate } from '@/lib/utils';
 
 // Ensure all paths are statically generated at build time
 export async function generateStaticParams() {
@@ -84,10 +85,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               </Link>
             </div>
 
-            {/* Article Header */}
             <header className="mb-12 border-b-4 border-foreground pb-8">
               <span className="text-primary font-bold text-sm md:text-base tracking-widest uppercase block mb-4">
-                {new Date(post.metadata.date).toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' })}
+                {formatDate(post.metadata.date)}
               </span>
               <h1 className="text-4xl md:text-6xl text-foreground font-headline uppercase tracking-wide leading-tight mb-6">
                 {post.metadata.title}

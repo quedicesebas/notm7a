@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getAllPosts } from '@/lib/blog';
 import { ArrowRight, Newspaper } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { formatDate } from '@/lib/utils';
 
 export function RecentPosts() {
   const posts = getAllPosts().slice(0, 3); // Get only the 3 most recent posts
@@ -50,7 +51,7 @@ export function RecentPosts() {
               <div className="p-6 flex flex-col flex-1">
                 <div className="mb-4">
                   <span className="text-primary font-bold text-xs tracking-widest uppercase mb-2 block">
-                    {new Date(post.date).toLocaleDateString('es-CO', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    {formatDate(post.date)}
                   </span>
                   <h3 className="text-xl md:text-2xl font-headline uppercase leading-tight group-hover:text-primary transition-colors">
                     <Link href={`/blog/${post.slug}`} className="before:absolute before:inset-0">
